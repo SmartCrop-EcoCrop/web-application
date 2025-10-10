@@ -1,0 +1,76 @@
+/* Layout Principal */
+.plagas-layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+.main-identification-content {
+  flex-grow: 1;
+  max-width: 65%;
+}
+.plagas-sidebar {
+  width: 350px;
+}
+
+/* Área de Subida de Imagen */
+.upload-area {
+  border: 3px dashed #e0e0e0;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #fcfcfc;
+}
+.upload-icon {
+  font-size: 40px;
+  color: #008075;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Resultados de Identificación */
+.identification-results h3 {
+  color: #1a4f4d;
+  margin-bottom: 15px;
+}
+.result-card {
+  border: 1px solid #d4edda;
+  background-color: #f0fff4;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Sidebar Card (similar a Alertas) */
+.sidebar-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.sidebar-card h3 {
+  font-size: 18px;
+  color: #1a4f4d;
+  margin-bottom: 15px;
+}
+.search-plagas input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.full-width {
+  width: 100%;
+}
+.plagas-list {
+  list-style: none;
+  padding: 0;
+}
+.plagas-list a {
+  color: #008075;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}

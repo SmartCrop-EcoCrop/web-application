@@ -1,0 +1,35 @@
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #495057; /* Texto gris */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #e9ecef; /* Fondo claro al pasar el ratón */
+  color: #00564e; /* Color verde oscuro del proyecto */
+}
+
+/* Estilo para el elemento activo, como en tu captura de pantalla */
+.nav-item.active {
+  background-color: #e6f5f4; /* Fondo verde muy claro para indicar selección */
+  color: #00564e; /* Texto verde oscuro */
+  border-left: 4px solid #00564e; /* Barra lateral izquierda */
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 20px; /* Tamaño para los iconos */
+  width: 25px; /* Ancho fijo para alinear los iconos */
+  text-align: center;
+}

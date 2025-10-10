@@ -1,0 +1,97 @@
+.access-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8; /* Fondo general */
+}
+
+.access-box {
+  width: 90%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 40px;
+  text-align: center;
+}
+
+.access-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.access-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.access-form {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.access-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.access-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  /* Estilos del botón verde oscuro (debe ser global o aquí) */
+  background-color: #00564e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forgot-link, .register-link-text a {
+  color: #00564e;
+  text-decoration: none;
+}
+
+.register-link-text {
+  margin-top: 20px;
+  font-size: 15px;
+}

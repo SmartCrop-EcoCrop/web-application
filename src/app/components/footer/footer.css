@@ -1,0 +1,158 @@
+/*==========================================
+  Footer General
+==========================================*/
+.app-footer {
+  background-color: #00564e; /* El fondo es blanco */
+  padding: 40px 0 10px 0;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #00564e; /* Línea divisoria superior sutil */
+  color: #00564e;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid #e9ecef; /* Línea de separación entre contenido y copyright */
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+/*==========================================
+  Columnas
+==========================================*/
+.footer-column {
+  flex-basis: 20%; /* Distribución equitativa de las 5 columnas */
+}
+
+/* Columna de Logo y Contacto */
+.brand-info {
+  flex-basis: 25%; /* Dale un poco más de espacio al logo/contacto */
+}
+
+.logo-image {
+  width: 60px; /* Ajusta el tamaño de tu logo */
+  height: 60px;
+  margin-bottom: 20px;
+  /* Estilos para replicar el efecto verde de la captura */
+  border-radius: 50%;
+  /* Si la imagen no está cargada, el logo verde debe replicarse */
+  background-color: #e8f5e9;
+}
+
+.contact-item {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.contact-item .icon {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #008075; /* Iconos en color primario */
+}
+
+/* Títulos de Columna */
+.column-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Lista de Enlaces */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-list li {
+  margin-bottom: 8px;
+}
+
+.link-list a {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.link-list a:hover {
+  color: #008075; /* Resaltar al pasar el mouse */
+}
+
+/* Iconos de Redes Sociales (Simulación con texto o emojis) */
+.social-icon {
+  font-size: 16px;
+  margin-right: 5px;
+  width: 20px; /* Asegurar alineación */
+  display: inline-block;
+  text-align: center;
+  color: #008075;
+}
+
+/*==========================================
+  Copyright
+==========================================*/
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Si tu logo real es un SVG o un componente con el círculo de colores: */
+.brand-info .footer-logo {
+  /* Si necesitas estilizar el contenedor del logo, hazlo aquí */
+}
+/*==========================================
+  Footer General (Contenedor principal)
+==========================================*/
+.app-footer {
+  /* Fondo: Gris oscuro */
+  background-color: #00564e;
+
+  /* Color base del texto (Gris muy claro) */
+  color: #ced4da;
+
+  /* Mantenemos tu posicionamiento original, solo afectamos el color */
+  /* ... */
+}
+
+/* Títulos de Columna */
+.column-title {
+  color: white; /* Los títulos deben ser blancos */
+  /* ... */
+}
+
+/* Lista de Enlaces */
+.link-list a {
+  color: #ced4da; /* Color de los enlaces */
+  /* ... */
+}
+
+.link-list a:hover {
+  color: #008075; /* Mantenemos tu color de hover verde */
+}
+
+/* Columna de Contacto */
+.contact-item {
+  color: #ced4da; /* Texto de contacto claro */
+}
+
+.contact-item .icon {
+  color: #008075; /* Mantén los íconos de contacto en verde */
+}
+
+/* Copyright al final */
+.footer-bottom {
+  /* ... */
+  color: #adb5bd; /* Texto del copyright */
+}

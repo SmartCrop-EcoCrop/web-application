@@ -1,0 +1,119 @@
+/* Estilo General de Layout */
+.alerts-layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.main-alerts-content {
+  flex-grow: 1;
+  max-width: 65%; /* Estrechar la columna principal */
+}
+
+.alerts-sidebar {
+  width: 350px;
+}
+
+/* Encabezados de Página */
+.page-header h1 {
+  color: #1a4f4d; /* Verde oscuro */
+  margin-bottom: 5px;
+}
+.page-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Pestañas de Filtrado */
+.tabs-container {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #888;
+}
+.tab.active {
+  color: #008075;
+  border-bottom: 3px solid #008075;
+  margin-bottom: -1px; /* Para ocultar el borde de la línea */
+}
+
+/* Estilos de la Lista de Alertas (Timeline) */
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px dashed #e0e0e0;
+}
+.alert-details {
+  flex-grow: 1;
+  text-align: left;
+}
+.alert-title {
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+.alert-tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.alert-tag.urgent {
+  background-color: #fcebeb;
+  color: #d9534f; /* Rojo */
+}
+
+/* Historial */
+.alerts-history h2 {
+  font-size: 24px;
+  color: #1a4f4d;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.history-details {
+  padding-left: 15px;
+}
+
+/* Card de Sidebar */
+.sidebar-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: left;
+}
+.live-alert img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+.live-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.live-title.error {
+  color: #d9534f;
+}
+.btn-details {
+  background: #008075;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}

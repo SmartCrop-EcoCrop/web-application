@@ -1,0 +1,29 @@
+<header class="app-header">
+  <div class="header-logo">
+    <span class="logo-icon">🌿</span>
+    SmartCrop
+  </div>
+
+  <nav class="header-nav">
+    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
+    <a routerLink="/app/foro" routerLinkActive="active" class="nav-link">Foro</a>
+    <a routerLink="/app/clima" routerLinkActive="active" class="nav-link">Clima</a>
+    <a routerLink="/app/noticias" routerLinkActive="active" class="nav-link">Noticias</a>
+  </nav>
+
+  <div class="header-actions">
+
+    <app-language-selector></app-language-selector>
+
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Buscar">
+    </div>
+
+    <span class="notification-icon">🔔</span>
+
+    <a routerLink="/app/profile" class="profile-link">
+      <img src="assets/avatar.jpg" alt="Usuario" class="profile-avatar">
+    </a>
+  </div>
+</header>

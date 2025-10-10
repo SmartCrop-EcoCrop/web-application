@@ -1,0 +1,120 @@
+
+.access-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f9fb;
+  padding: 20px;
+}
+
+.access-box {
+  width: 90%;
+  max-width: 950px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 50px;
+  text-align: center;
+}
+
+.access-title {
+  color: #1a4f4d;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+
+.access-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.access-form {
+  flex: 1; /* Permite que el formulario tome el espacio restante */
+  text-align: left;
+  padding-right: 30px;
+}
+
+
+.image-container {
+
+  flex-basis: 350px;
+  min-height: 350px;
+  overflow: hidden;
+  border: 5px solid #e8f5e9;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*==========================================
+  ELEMENTOS DEL FORMULARIO Y ALINEACIÓN
+==========================================*/
+.access-form label:not(.checkbox-label) {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.access-form input[type="text"],
+.access-form input[type="password"] {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.forgot-link {
+  color: #008075;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Botón Ingresar */
+.btn-primary {
+  background-color: #008075;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 35px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Enlace de Registro */
+.register-link-text {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #666;
+}
+
+.register-link-text a {
+  color: #008075;
+  text-decoration: none;
+  font-weight: bold;
+}

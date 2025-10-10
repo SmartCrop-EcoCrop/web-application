@@ -1,0 +1,25 @@
+/* src/app/app.css */
+
+/* Aplica a los elementos más altos de la jerarquía */
+body, :root {
+  /* Forzamos la fuente para todo */
+  font-family: 'Roboto', sans-serif !important;
+  margin: 0;
+}
+
+/* Aplica a todos los elementos HTML, incluyendo pseudo-elementos */
+*, *::before, *::after {
+  font-family: 'Roboto', sans-serif !important;
+  /* Esto es crucial para asegurar que la fuente se aplique
+     a todos los componentes y anule estilos predeterminados. */
+}
+
+/* Opcional: Para enlaces y botones que a veces ignoran la herencia */
+a, button, input, textarea {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Opcional: Ajuste para encabezados */
+h1, h2, h3, h4 {
+  font-weight: 500;
+}

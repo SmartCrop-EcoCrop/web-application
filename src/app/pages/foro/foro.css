@@ -1,0 +1,89 @@
+/* Estilo General */
+.page-header h1 {
+  color: #1a4f4d; /* Verde oscuro */
+  text-align: center;
+}
+.page-header p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Sección de Búsqueda y Filtros */
+.forum-search-section {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+.search-input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.search-input-box input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.search-icon {
+  color: #999;
+  font-size: 18px;
+}
+
+/* Filtros (Pestañas) */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.filter-tab {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background-color: #e8f5e9;
+  color: #1a4f4d;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.filter-tab.active {
+  background-color: #008075;
+  color: white;
+}
+
+/* Lista de Temas */
+.forum-topics-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.topic-item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.topic-title {
+  color: #1a4f4d;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.topic-description {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.topic-footer {
+  font-size: 12px;
+  color: #999;
+}
+.topic-footer span {
+  margin-right: 15px;
+}
+.author-info {
+  color: #008075;
+}

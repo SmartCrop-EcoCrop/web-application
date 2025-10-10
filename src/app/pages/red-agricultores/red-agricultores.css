@@ -1,0 +1,109 @@
+/* Layout Principal */
+.red-layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+.main-forum-content {
+  flex-grow: 1;
+  max-width: 65%;
+}
+
+/* Tarjeta de Nueva Publicación */
+.new-post-card {
+  background: white;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.new-post-card textarea {
+  width: 100%;
+  min-height: 80px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+.post-actions {
+  text-align: right;
+}
+.btn-primary.small {
+  padding: 8px 15px;
+  font-size: 14px;
+  width: auto;
+  margin-top: 0;
+}
+
+/* Estilo de Publicación */
+.post-item {
+  background: white;
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e8f5e9;
+  color: #008075;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.username {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+.post-time {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+.post-stats span {
+  font-size: 14px;
+  color: #666;
+  margin-right: 15px;
+}
+
+/* Sidebar de Red de Agricultores */
+.red-sidebar {
+  width: 350px;
+}
+.sidebar-card {
+  /* (Mismos estilos que en PlagasComponent) */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.topics-list, .users-list {
+  list-style: none;
+  padding: 0;
+}
+.topics-list a {
+  color: #008075;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+.users-list li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,63 @@
+<div class="profile-container">
+  <h1 class="page-title">Mi Perfil y Configuraciones</h1>
+  <p class="subtitle">Gestiona la información de tu cuenta, las notificaciones y los ajustes de tu aplicación SmartCrop.</p>
+
+  <div class="profile-card general-info">
+    <div class="avatar-section">
+      <img src="assets/user_avatar.png" alt="Foto de perfil" class="avatar">
+      <button class="edit-avatar-btn">Cambiar Foto</button>
+    </div>
+
+    <form class="info-form">
+      <h2>Información Personal</h2>
+
+      <div class="form-group">
+        <label for="name">Nombre Completo</label>
+        <input type="text" id="name" value="Juan Pérez" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" value="juan.perez@agricultor.com" disabled>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Ubicación del Cultivo</label>
+        <input type="text" id="location" value="Valle Central, Costa Rica">
+      </div>
+
+      <button type="submit" class="save-btn">Guardar Cambios</button>
+    </form>
+  </div>
+
+  <div class="profile-card notifications-settings">
+    <h2>Notificaciones</h2>
+    <div class="settings-group">
+      <label class="toggle-switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <span>Alertas de Plagas</span>
+    </div>
+    <div class="settings-group">
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <span>Recordatorios de Riego</span>
+    </div>
+    <div class="settings-group">
+      <label class="toggle-switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <span>Novedades y Guías</span>
+    </div>
+  </div>
+
+  <div class="account-actions">
+    <button class="action-btn change-password">Cambiar Contraseña</button>
+    <button class="action-btn logout-btn">Cerrar Sesión</button>
+  </div>
+
+</div>

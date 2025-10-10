@@ -1,0 +1,90 @@
+/* Layout General */
+.noticias-layout {
+  padding: 20px;
+}
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+/* Estilos de pestañas son similares a los de Foro/Alertas */
+
+/* Contenedor Principal (2 Columnas) */
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.main-news-content {
+  flex-grow: 1;
+  max-width: 65%;
+}
+.news-sidebar {
+  width: 350px;
+}
+
+/* Item de Noticia */
+.news-item {
+  display: flex;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+.news-image-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-right: 1px solid #f0f0f0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.news-details {
+  padding: 15px;
+  flex-grow: 1;
+}
+.news-title {
+  color: #1a4f4d;
+  font-size: 18px;
+  margin-top: 0;
+}
+.news-excerpt {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Footer de Noticia */
+.news-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}
+.btn-read-more {
+  background-color: #008075;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-load-more {
+  display: block;
+  width: 300px;
+  margin: 30px auto;
+  background-color: #5cb85c; /* Un verde más brillante */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}

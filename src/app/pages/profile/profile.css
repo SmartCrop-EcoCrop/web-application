@@ -1,0 +1,209 @@
+/* Estilos Generales */
+.profile-container {
+  padding: 20px;
+}
+
+.page-title {
+  margin-top: 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+/* ----------------------------------------------------- */
+/* 1. Información General */
+/* ----------------------------------------------------- */
+.general-info {
+  display: flex;
+  gap: 50px;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #e9ecef;
+}
+
+.edit-avatar-btn {
+  background-color: #f7f7f7;
+  color: #00564e;
+  border: 1px solid #00564e;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info-form {
+  flex-grow: 1;
+}
+
+.info-form h2 {
+  margin-top: 0;
+  color: #00564e;
+  font-size: 22px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input[disabled] {
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+.save-btn {
+  background-color: #00564e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #00423c;
+}
+
+/* ----------------------------------------------------- */
+/* 2. Configuraciones de Notificación */
+/* ----------------------------------------------------- */
+.notifications-settings h2 {
+  margin-top: 0;
+  color: #00564e;
+  font-size: 22px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.settings-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.settings-group:last-child {
+  border-bottom: none;
+}
+
+/* Estilo para el Toggle Switch (Interruptor) */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00564e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* ----------------------------------------------------- */
+/* 3. Acciones de Cuenta */
+/* ----------------------------------------------------- */
+.account-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.change-password {
+  background-color: #f7f7f7;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.logout-btn {
+  background-color: #dc3545; /* Rojo para cerrar sesión */
+  color: white;
+  border: none;
+}

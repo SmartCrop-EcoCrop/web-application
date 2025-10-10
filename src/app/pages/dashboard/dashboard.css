@@ -1,0 +1,107 @@
+/* Estilo Base para el Dashboard */
+.dashboard-container {
+  /* Usamos Grid para controlar el diseño de manera efectiva */
+  display: grid;
+  /* Define 2 columnas: 1 columna grande para la imagen y 1 pequeña para la temperatura */
+  grid-template-columns: 2fr 1fr;
+  /* Define 3 filas: 1 para el título, 1 para el contenido principal, 1 para el contenido inferior (si hubiera) */
+  grid-template-rows: auto 1fr;
+  gap: 30px; /* Espacio entre los bloques */
+}
+
+.dashboard-title {
+  grid-column: 1 / -1; /* Ocupa todo el ancho (ambas columnas) */
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* ----------------------------------------------------- */
+/* Estilos Generales de Tarjeta (Card) */
+/* ----------------------------------------------------- */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  padding: 25px;
+}
+
+/* ----------------------------------------------------- */
+/* 1. Vista en Tiempo Real (Columna Izquierda) */
+/* ----------------------------------------------------- */
+.real-time-view {
+  grid-column: 1 / 2; /* Ocupa la primera columna */
+  padding: 0; /* Quitamos el padding para que la imagen toque los bordes */
+  overflow: hidden; /* Asegura que la imagen no se salga */
+}
+
+.real-time-view h2 {
+  padding: 15px 25px 0 25px; /* Solo padding superior e interior */
+  margin-top: 0;
+  color: #00564e;
+  font-size: 20px;
+}
+
+.field-image-wrapper {
+  margin-top: 15px;
+  height: 400px; /* Altura fija para la imagen */
+  overflow: hidden;
+}
+
+.field-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  display: block;
+}
+
+/* ----------------------------------------------------- */
+/* 2. Tarjeta de Temperatura Actual (Columna Derecha) */
+/* ----------------------------------------------------- */
+.current-temp-card {
+  grid-column: 2 / 3; /* Ocupa la segunda columna */
+  height: fit-content; /* Se ajusta a su contenido */
+  text-align: center;
+}
+
+.current-temp-card h3 {
+  margin-top: 0;
+  color: #666;
+  font-size: 18px;
+}
+
+.temp-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00564e; /* El color principal de tu marca */
+  margin: 10px 0 20px;
+}
+
+.temp-details {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.temp-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.view-history-btn {
+  /* Estilo para el botón secundario */
+  background-color: #f7f7f7;
+  color: #00564e;
+  border: 1px solid #00564e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.view-history-btn:hover {
+  background-color: #e9ecef;
+}

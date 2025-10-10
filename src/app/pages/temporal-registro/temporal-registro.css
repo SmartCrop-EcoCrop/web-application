@@ -1,0 +1,155 @@
+/* Estilos Generales */
+.page-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 26px;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* ----------------------------------------------------- */
+/* 1. Controles de Filtrado */
+/* ----------------------------------------------------- */
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-select, .filter-button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filter-button {
+  background-color: #00564e;
+  color: white;
+  border: none;
+}
+
+/* ----------------------------------------------------- */
+/* 2. Tarjetas de Resumen */
+/* ----------------------------------------------------- */
+.summary-cards {
+  display: grid;
+  /* Divide el espacio en 4 columnas iguales */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.summary-card {
+  background-color: #f0f7f7; /* Color de fondo claro, similar a tu captura */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-label {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.card-value {
+  margin: 5px 0 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #00564e;
+}
+
+/* ----------------------------------------------------- */
+/* 3. Gráficos Interactivos */
+/* ----------------------------------------------------- */
+.interactive-charts {
+  display: grid;
+  /* Divide el espacio en 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.chart-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.chart-subtitle {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #a0a0a0;
+}
+
+.chart-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00564e;
+  margin: 5px 0;
+}
+
+.change {
+  font-size: 14px;
+  color: #28a745; /* Verde para el aumento */
+  font-weight: normal;
+}
+
+.chart-placeholder {
+  height: 120px; /* Altura para simular el área del gráfico */
+  background-color: #f8f8f8;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.chart-x-axis {
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+}
+
+/* Estilo para las barras en el gráfico de Eventos/Acciones */
+.event-chart-data {
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: white;
+}
+
+.event-bar {
+  background-color: #00564e; /* El color de la barra */
+  color: white;
+  font-size: 10px;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  max-width: 100%;
+  /* Alineación de texto y altura para simular las barras */
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}

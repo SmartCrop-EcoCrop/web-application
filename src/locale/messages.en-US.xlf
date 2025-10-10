@@ -1,0 +1,4 @@
+<trans-unit id="loginTitle" datatype="html">
+    <source>Iniciar Sesión</source>
+    <target>Login</target>
+</trans-unit>

@@ -1,0 +1,19 @@
+/* src/app/components/language-selector/language-selector.css */
+.lang-dropdown {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 120px;
+  /* Estilos para integrarlo en el header oscuro */
+  background-color: #495057; /* Un poco más claro que el fondo del header */
+  color: white;
+  border: 1px solid #6c757d;
+}
+
+.lang-dropdown:focus {
+  outline: none;
+  border-color: #008075;
+}

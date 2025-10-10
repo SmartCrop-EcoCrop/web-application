@@ -1,0 +1,115 @@
+/* Layout Principal */
+.clima-layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+.clima-main-content {
+  flex-grow: 1;
+  max-width: 65%;
+}
+.clima-sidebar {
+  width: 350px;
+}
+.clima-sidebar h2 {
+  color: #1a4f4d;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Tarjeta de Clima Actual */
+.current-weather-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+.weather-visual img {
+  width: 350px; /* Ancho de la imagen del clima */
+  height: 100%;
+  object-fit: cover;
+}
+.weather-details {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  color: #008075;
+  margin: 0;
+}
+.condition {
+  font-size: 20px;
+  color: #555;
+  margin: 5px 0;
+}
+.humidity {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Pronóstico Semanal */
+.weekly-forecast h2 {
+  color: #1a4f4d;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.forecast-cards-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.forecast-day-card {
+  min-width: 100px;
+  text-align: center;
+  padding: 15px 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+.forecast-day-card img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.day-name {
+  font-weight: 600;
+  margin: 0;
+}
+.temp-range {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+}
+
+/* Alertas Laterales */
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.alert-icon {
+  font-size: 24px;
+  color: #008075;
+  margin-right: 15px;
+}
+.alert-title {
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 3px 0;
+}
+.alert-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
