@@ -6,15 +6,15 @@
 <div class="guides-search-section">
   <div class="search-input-box">
     <span class="search-icon">🔍</span>
-    <input type="text" [placeholder]="'guias.searchPlaceholder' | translate">
+    <input type="text" [placeholder]="'guias.searchPlaceholder' | translate" #searchInput>
   </div>
 
   <div class="filter-tabs">
-    <span class="filter-tab active">{{ 'guias.filterPests' | translate }}</span>
-    <span class="filter-tab">{{ 'guias.filterClimate' | translate }}</span>
-    <span class="filter-tab">{{ 'guias.filterIrrigation' | translate }}</span>
-    <span class="filter-tab">{{ 'guias.filterHarvest' | translate }}</span>
-    <span class="filter-tab">{{ 'guias.filterMaintenance' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'guias.filterPests' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'guias.filterClimate' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'guias.filterIrrigation' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'guias.filterHarvest' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'guias.filterMaintenance' | translate }}</span>
   </div>
 </div>
 

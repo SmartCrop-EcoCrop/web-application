@@ -6,15 +6,15 @@
 <div class="forum-search-section">
   <div class="search-input-box">
     <span class="search-icon">🔍</span>
-    <input type="text" [placeholder]="'foro.searchPlaceholder' | translate">
+    <input type="text" [placeholder]="'foro.searchPlaceholder' | translate" #searchInput>
   </div>
 
   <div class="filter-tabs">
-    <span class="filter-tab active">{{ 'foro.tabCropProblems' | translate }}</span>
-    <span class="filter-tab">{{ 'foro.tabTechnology' | translate }}</span>
-    <span class="filter-tab">{{ 'foro.tabClimate' | translate }}</span>
-    <span class="filter-tab">{{ 'foro.tabImprovements' | translate }}</span>
-    <span class="filter-tab">{{ 'foro.tabNews' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'foro.tabCropProblems' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'foro.tabTechnology' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'foro.tabClimate' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'foro.tabImprovements' | translate }}</span>
+    <span class="filter-tab" (click)="setSearchFilter(searchInput, $event)">{{ 'foro.tabNews' | translate }}</span>
   </div>
 </div>
 

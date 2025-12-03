@@ -40,12 +40,13 @@
 }
 
 .image-container {
-  flex-basis: clamp(200px, 40vw, 350px);
-  min-height: clamp(200px, 40vw, 350px);
+
+  flex: 1 1 350px; /* Crece, se encoge, con una base de 350px */
+
+
   overflow: hidden;
   border: 5px solid #e8f5e9;
   border-radius: 10px;
-  display: none;
 }
 
 .image-container img {

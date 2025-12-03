@@ -50,14 +50,21 @@
     </div>
   </div>
 
-  <div class="alerts-sidebar">
+ <div class="alerts-sidebar">
     <div class="sidebar-card live-alert">
-      <p class="live-tag">{{ 'alertas.realTimeAlert' | translate }}</p>
-      <h3 class="live-title error">{{ 'alertas.frostAlert' | translate }}</h3>
-      <p class="live-desc">{{ 'alertas.frostAlertDesc' | translate }}</p>
+      <p class="live-tag">Alerta en Tiempo Real</p>
+      <h3 class="live-title error">Alerta de Helada</h3>
+      <p class="live-desc">Se espera una helada severa en las próximas 3 horas. Proteja sus cultivos.</p>
       <img src="assets/campo_helada.jpg" alt="Campo con escarcha">
-      <button class="btn-details">{{ 'alertas.viewDetails' | translate }}</button>
-    </div>
+
+      <a
+          href="https://www.senamhi.gob.pe/?p=heladas-y-friajes"
+          target="_blank"  
+          class="btn-details">
+          {{ 'alertas.viewDetails' | translate }} →
+      </a>
+      </div>
+
 
     <div class="sidebar-card config-card">
       <h3>{{ 'alertas.config' | translate }}</h3>

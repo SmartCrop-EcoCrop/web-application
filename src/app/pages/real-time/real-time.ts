@@ -37,21 +37,21 @@ export class RealTimeComponent {
     {
       id: 'zoneA',
       labelKey: 'realtime.zoneA',
-      image: 'assets/camera_preview_a.jpg',
+      image: 'assets/huerto1.jpg',
       temperature: '24°C',
       humidity: '58%'
     },
     {
       id: 'zoneB',
       labelKey: 'realtime.zoneB',
-      image: 'assets/camera_preview_b.jpg',
+      image: 'assets/huerto2.jpg',
       temperature: '26°C',
       humidity: '52%'
     },
     {
       id: 'zoneC',
       labelKey: 'realtime.zoneC',
-      image: 'assets/camera_preview_c.jpg',
+      image: 'assets/huerto3.jpg',
       temperature: '23°C',
       humidity: '61%'
     }
