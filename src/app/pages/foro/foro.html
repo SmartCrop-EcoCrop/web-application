@@ -1,42 +1,42 @@
 <div class="page-header">
-  <h1 i18n="@@foro.title">Discussion Forum</h1>
-  <p i18n="@@foro.subtitle">Discuss best agricultural practices, solve problems and share knowledge with the community.</p>
+  <h1>{{ 'foro.title' | translate }}</h1>
+  <p>{{ 'foro.subtitle' | translate }}</p>
 </div>
 
 <div class="forum-search-section">
   <div class="search-input-box">
     <span class="search-icon">🔍</span>
-    <input type="text" i18n-placeholder="@@foro.searchPlaceholder" placeholder="Search in the forum">
+    <input type="text" [placeholder]="'foro.searchPlaceholder' | translate">
   </div>
 
   <div class="filter-tabs">
-    <span class="filter-tab active" i18n="@@foro.tabCropProblems">Crop Problems</span>
-    <span class="filter-tab" i18n="@@foro.tabTechnology">Technology and Tools</span>
-    <span class="filter-tab" i18n="@@foro.tabClimate">Climate Conditions</span>
-    <span class="filter-tab" i18n="@@foro.tabImprovements">Agricultural Improvements</span>
-    <span class="filter-tab" i18n="@@foro.tabNews">News and Updates</span>
+    <span class="filter-tab active">{{ 'foro.tabCropProblems' | translate }}</span>
+    <span class="filter-tab">{{ 'foro.tabTechnology' | translate }}</span>
+    <span class="filter-tab">{{ 'foro.tabClimate' | translate }}</span>
+    <span class="filter-tab">{{ 'foro.tabImprovements' | translate }}</span>
+    <span class="filter-tab">{{ 'foro.tabNews' | translate }}</span>
   </div>
 </div>
 
 <div class="forum-topics-list">
 
   <div class="topic-item">
-    <h3 class="topic-title" i18n="@@foro.topic1Title">Pest Management in Corn Crops</h3>
-    <p class="topic-description" i18n="@@foro.topic1Desc">Let's discuss best practices for pest management in corn crops. What methods have been effective for you?</p>
+    <h3 class="topic-title">{{ 'foro.topic1Title' | translate }}</h3>
+    <p class="topic-description">{{ 'foro.topic1Desc' | translate }}</p>
     <div class="topic-footer">
       <span>👍 19</span>
       <span>💬 250</span>
-      <span class="author-info"><span i18n="@@foro.by">By</span> Elena Ramírez <span i18n="@@foro.daysAgo">days ago</span> 2</span>
+      <span class="author-info"><span>{{ 'foro.by' | translate }}</span> Elena Ramírez <span>{{ 'foro.daysAgo' | translate }}</span> 2</span>
     </div>
   </div>
 
   <div class="topic-item">
-    <h3 class="topic-title" i18n="@@foro.topic2Title">Comparison of Tractors and Agricultural Tools</h3>
-    <p class="topic-description" i18n="@@foro.topic2Desc">Share your experiences with different types of tractors and agricultural tools. Which brands and models are most reliable?</p>
+    <h3 class="topic-title">{{ 'foro.topic2Title' | translate }}</h3>
+    <p class="topic-description">{{ 'foro.topic2Desc' | translate }}</p>
     <div class="topic-footer">
       <span>👍 22</span>
       <span>💬 320</span>
-      <span class="author-info"><span i18n="@@foro.by">By</span> Ricardo García <span i18n="@@foro.daysAgo">days ago</span> 3</span>
+      <span class="author-info"><span>{{ 'foro.by' | translate }}</span> Ricardo García <span>{{ 'foro.daysAgo' | translate }}</span> 3</span>
     </div>
   </div>
 

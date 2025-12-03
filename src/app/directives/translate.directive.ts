@@ -7,24 +7,39 @@ import { effect } from '@angular/core';
   standalone: true
 })
 export class TranslateDirective implements OnInit {
-  @Input('i18n') i18nKey: string = '';
+  private translationKey = '';
+  private fallbackText = '';
+
+  @Input('i18n')
+  set i18nKey(value: string) {
+    this.translationKey = this.normalizeKey(value);
+  }
   
   private el = inject(ElementRef);
   private i18nService = inject(I18nService);
   private destroyRef = inject(DestroyRef);
 
   ngOnInit() {
-    if (!this.i18nKey) return;
+    this.fallbackText = (this.el.nativeElement.textContent ?? '').trim();
+    if (!this.translationKey) return;
 
     // Crear un effect que reaccione a cambios de idioma
     const effectRef = effect(() => {
-      const lang = this.i18nService.currentLanguage();
-      const translation = this.i18nService.translate(this.i18nKey);
-      this.el.nativeElement.textContent = translation;
+      this.i18nService.currentLanguage();
+      const translation = this.i18nService.translate(this.translationKey);
+      const resolvedText = translation !== this.translationKey && translation.trim().length > 0
+        ? translation
+        : (this.fallbackText || this.translationKey);
+      this.el.nativeElement.textContent = resolvedText;
     });
 
     // Registrar limpieza en DestroyRef
     this.destroyRef.onDestroy(() => effectRef.destroy());
+  }
+
+  private normalizeKey(value: string): string {
+    if (!value) return '';
+    return value.startsWith('@@') ? value.substring(2) : value;
   }
 }
 
@@ -33,23 +48,38 @@ export class TranslateDirective implements OnInit {
   standalone: true
 })
 export class TranslatePlaceholderDirective implements OnInit {
-  @Input('i18n-placeholder') i18nKey: string = '';
+  private translationKey = '';
+  private fallbackText = '';
+
+  @Input('i18n-placeholder')
+  set i18nKey(value: string) {
+    this.translationKey = this.normalizeKey(value);
+  }
   
   private el = inject(ElementRef);
   private i18nService = inject(I18nService);
   private destroyRef = inject(DestroyRef);
 
   ngOnInit() {
-    if (!this.i18nKey) return;
+    this.fallbackText = this.el.nativeElement.placeholder ?? '';
+    if (!this.translationKey) return;
 
     // Crear un effect que reaccione a cambios de idioma
     const effectRef = effect(() => {
-      const lang = this.i18nService.currentLanguage();
-      const translation = this.i18nService.translate(this.i18nKey);
-      this.el.nativeElement.placeholder = translation;
+      this.i18nService.currentLanguage();
+      const translation = this.i18nService.translate(this.translationKey);
+      const resolvedText = translation !== this.translationKey && translation.trim().length > 0
+        ? translation
+        : (this.fallbackText || this.translationKey);
+      this.el.nativeElement.placeholder = resolvedText;
     });
 
     // Registrar limpieza en DestroyRef
     this.destroyRef.onDestroy(() => effectRef.destroy());
+  }
+
+  private normalizeKey(value: string): string {
+    if (!value) return '';
+    return value.startsWith('@@') ? value.substring(2) : value;
   }
 }

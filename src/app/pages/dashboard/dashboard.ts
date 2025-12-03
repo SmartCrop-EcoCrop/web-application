@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { I18nService } from '../../services/i18n.service';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [TranslateDirective, TranslatePlaceholderDirective],
+  imports: [TranslatePipe],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })

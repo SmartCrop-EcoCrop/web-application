@@ -1,41 +1,41 @@
 <div class="page-header">
-  <h1 i18n="@@plagas.title">Pest Identification</h1>
-  <p i18n="@@plagas.subtitle">Use our artificial vision system to identify pests in your crops or explore our database.</p>
+  <h1>{{ 'plagas.title' | translate }}</h1>
+  <p>{{ 'plagas.subtitle' | translate }}</p>
 </div>
 
 <div class="plagas-layout">
 
   <div class="main-identification-content">
-    <h2 i18n="@@plagas.quickId">Quick Identification by Image</h2>
+    <h2>{{ 'plagas.quickId' | translate }}</h2>
 
     <div class="upload-area">
       <span class="upload-icon">📸</span>
-      <p i18n="@@plagas.dragDrop">Drag and drop a photo of the damage or pest, or click to browse.</p>
-      <button class="btn-primary" i18n="@@plagas.uploadBtn">Upload Image</button>
+      <p>{{ 'plagas.dragDrop' | translate }}</p>
+      <button class="btn-primary">{{ 'plagas.uploadBtn' | translate }}</button>
     </div>
 
     <div class="identification-results">
-      <h3 i18n="@@plagas.resultTitle">Identification Result</h3>
+      <h3>{{ 'plagas.resultTitle' | translate }}</h3>
       <div class="result-card">
-        <p i18n="@@plagas.resultExample">The detected pest would be shown here (e.g: Aphid) with confidence percentage and recommendations.</p>
+        <p>{{ 'plagas.resultExample' | translate }}</p>
       </div>
     </div>
   </div>
 
   <div class="plagas-sidebar">
     <div class="sidebar-card search-plagas">
-      <h3 i18n="@@plagas.searchDb">Search in Database</h3>
-      <input type="text" i18n-placeholder="@@plagas.searchPlaceholder" placeholder="Type the name of the pest or crop...">
-      <button class="btn-details full-width" i18n="@@plagas.searchBtn">Search</button>
+      <h3>{{ 'plagas.searchDb' | translate }}</h3>
+      <input type="text" [placeholder]="'plagas.searchPlaceholder' | translate">
+      <button class="btn-details full-width">{{ 'plagas.searchBtn' | translate }}</button>
     </div>
 
     <div class="sidebar-card top-plagas">
-      <h3 i18n="@@plagas.commonPests">Common Pests in the Region</h3>
+      <h3>{{ 'plagas.commonPests' | translate }}</h3>
       <ul class="plagas-list">
-        <li><a href="#">Pulgón</a></li>
-        <li><a href="#">Mosca Blanca</a></li>
-        <li><a href="#">Ácaro Rojo</a></li>
-        <li><a href="#">Mildiu</a></li>
+        <li><a href="#">{{ 'plagas.list.aphid' | translate }}</a></li>
+        <li><a href="#">{{ 'plagas.list.whitefly' | translate }}</a></li>
+        <li><a href="#">{{ 'plagas.list.redMite' | translate }}</a></li>
+        <li><a href="#">{{ 'plagas.list.mildew' | translate }}</a></li>
       </ul>
     </div>
   </div>

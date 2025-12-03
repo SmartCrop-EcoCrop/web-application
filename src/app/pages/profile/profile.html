@@ -1,63 +1,63 @@
 <div class="profile-container">
-  <h1 class="page-title" i18n="@@profile.title">My Profile and Settings</h1>
-  <p class="subtitle" i18n="@@profile.subtitle">Manage your account information, notifications and SmartCrop application settings.</p>
+  <h1 class="page-title">{{ 'profile.title' | translate }}</h1>
+  <p class="subtitle">{{ 'profile.subtitle' | translate }}</p>
 
   <div class="profile-card general-info">
     <div class="avatar-section">
       <img src="assets/user_avatar.png" alt="Foto de perfil" class="avatar">
-      <button class="edit-avatar-btn" i18n="@@profile.changePicture">Change Photo</button>
+      <button class="edit-avatar-btn">{{ 'profile.changePicture' | translate }}</button>
     </div>
 
     <form class="info-form">
-      <h2 i18n="@@profile.personalInfo">Personal Information</h2>
+      <h2>{{ 'profile.personalInfo' | translate }}</h2>
 
       <div class="form-group">
-        <label for="name" i18n="@@profile.fullName">Full Name</label>
+        <label for="name">{{ 'profile.fullName' | translate }}</label>
         <input type="text" id="name" value="Juan Pérez" required>
       </div>
 
       <div class="form-group">
-        <label for="email" i18n="@@profile.email">Email</label>
+        <label for="email">{{ 'profile.email' | translate }}</label>
         <input type="email" id="email" value="juan.perez@agricultor.com" disabled>
       </div>
 
       <div class="form-group">
-        <label for="location" i18n="@@profile.cropLocation">Crop Location</label>
+        <label for="location">{{ 'profile.cropLocation' | translate }}</label>
         <input type="text" id="location" value="Valle Central, Costa Rica">
       </div>
 
-      <button type="submit" class="save-btn" i18n="@@profile.saveChanges">Save Changes</button>
+      <button type="submit" class="save-btn">{{ 'profile.saveChanges' | translate }}</button>
     </form>
   </div>
 
   <div class="profile-card notifications-settings">
-    <h2 i18n="@@profile.notifications">Notifications</h2>
+    <h2>{{ 'profile.notifications' | translate }}</h2>
     <div class="settings-group">
       <label class="toggle-switch">
         <input type="checkbox" checked>
         <span class="slider"></span>
       </label>
-      <span i18n="@@profile.pestAlerts">Pest Alerts</span>
+      <span>{{ 'profile.pestAlerts' | translate }}</span>
     </div>
     <div class="settings-group">
       <label class="toggle-switch">
         <input type="checkbox">
         <span class="slider"></span>
       </label>
-      <span i18n="@@profile.irrigationReminders">Irrigation Reminders</span>
+      <span>{{ 'profile.irrigationReminders' | translate }}</span>
     </div>
     <div class="settings-group">
       <label class="toggle-switch">
         <input type="checkbox" checked>
         <span class="slider"></span>
       </label>
-      <span i18n="@@profile.newsGuides">News and Guides</span>
+      <span>{{ 'profile.newsGuides' | translate }}</span>
     </div>
   </div>
 
   <div class="account-actions">
-    <button class="action-btn change-password" i18n="@@profile.changePassword">Change Password</button>
-    <button class="action-btn logout-btn" i18n="@@profile.logout">Logout</button>
+    <button class="action-btn change-password">{{ 'profile.changePassword' | translate }}</button>
+    <button class="action-btn logout-btn">{{ 'profile.logout' | translate }}</button>
   </div>
 
 </div>

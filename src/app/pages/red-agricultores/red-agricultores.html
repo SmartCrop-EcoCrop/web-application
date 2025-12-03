@@ -1,56 +1,91 @@
 <div class="page-header">
-  <h1 i18n="@@red.title">Farmers Network</h1>
-  <p i18n="@@red.subtitle">Connect with other farmers to share experiences, tips and solutions.</p>
+  <h1>{{ 'red.title' | translate }}</h1>
+  <p>{{ 'red.subtitle' | translate }}</p>
 </div>
 
 <div class="red-layout">
 
-  <div class="main-forum-content">
+  <section class="main-forum-content">
 
-    <h2 i18n="@@red.newPost">Create a new post</h2>
-    <div class="new-post-card">
-      <textarea i18n-placeholder="@@red.newPostPlaceholder" placeholder="What are you harvesting today or what problem have you solved?"></textarea>
+    <h2>{{ 'red.newPost' | translate }}</h2>
+    <form class="new-post-card" (ngSubmit)="publishPost()">
+      <label class="new-post-field">
+        <span>{{ 'red.topicLabel' | translate }}</span>
+        <select [(ngModel)]="selectedCategory" name="category">
+          @for (option of categoryOptions; track option.value) {
+            <option [value]="option.value">{{ option.labelKey | translate }}</option>
+          }
+        </select>
+      </label>
+      <label class="new-post-field">
+        <span class="visually-hidden">{{ 'red.newPost' | translate }}</span>
+        <textarea
+          [placeholder]="'red.newPostPlaceholder' | translate"
+          [(ngModel)]="newPostContent"
+          name="newPost"
+          maxlength="280"
+        ></textarea>
+      </label>
       <div class="post-actions">
-        <button class="btn-primary small" i18n="@@red.postBtn">Post</button>
+        <span class="char-count">{{ newPostContent.length }}/280</span>
+        <button type="submit" class="btn-primary small" [disabled]="!newPostContent.trim()">
+          {{ 'red.postBtn' | translate }}
+        </button>
       </div>
-    </div>
+      <p class="feedback" *ngIf="feedbackKey" aria-live="polite">
+        {{ feedbackKey | translate }}
+      </p>
+    </form>
 
-    <h2 i18n="@@red.recentPosts">Recent Posts</h2>
+    <h2>{{ 'red.recentPosts' | translate }}</h2>
 
-    <div class="post-item">
+    <p class="empty-state" *ngIf="!posts.length">
+      {{ 'red.emptyState' | translate }}
+    </p>
+
+    <article class="post-item" *ngFor="let post of posts">
       <div class="post-header">
-        <span class="user-avatar">J</span>
+        <span class="user-avatar">{{ post.avatar }}</span>
         <div class="post-info">
-          <p class="username">Juan Pérez</p>
-          <p class="post-time" i18n="@@red.inIrrigation">In Irrigation</p>
+          <p class="username">{{ post.author }}</p>
+          <p class="post-time">
+            {{ post.categoryKey | translate }}
+            <span *ngIf="post.timeAgoKey"> · {{ post.timeAgoKey | translate }}</span>
+          </p>
         </div>
       </div>
-      <h4 class="post-title" i18n="@@red.postTitle">Best way to apply drip irrigation in dry climate</h4>
-      <p class="post-body" i18n="@@red.postContent">Hello everyone, I'm experiencing excessive evaporation with my drip system...</p>
+      <h4 class="post-title">
+        <ng-container *ngIf="post.titleKey; else customTitle">{{ post.titleKey | translate }}</ng-container>
+        <ng-template #customTitle>{{ post.title }}</ng-template>
+      </h4>
+      <p class="post-body">
+        <ng-container *ngIf="post.bodyKey; else customBody">{{ post.bodyKey | translate }}</ng-container>
+        <ng-template #customBody>{{ post.body }}</ng-template>
+      </p>
       <div class="post-stats">
-        <span>👍 15 <span i18n="@@red.likes">Likes</span></span>
-        <span>💬 7 <span i18n="@@red.comments">Comments</span></span>
+        <span>👍 {{ post.likes }} <span>{{ 'red.likes' | translate }}</span></span>
+        <span>💬 {{ post.comments }} <span>{{ 'red.comments' | translate }}</span></span>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 
-  <div class="red-sidebar">
+  <aside class="red-sidebar">
     <div class="sidebar-card popular-topics">
-      <h3 i18n="@@red.popularTopics">Popular Topics</h3>
+      <h3>{{ 'red.popularTopics' | translate }}</h3>
       <ul class="topics-list">
-        <li><a href="#">#FertilizaciónOrgánica</a></li>
-        <li><a href="#">#CosechaTomate</a></li>
-        <li><a href="#">#PlagasInvernales</a></li>
-        <li><a href="#">#DronesEnAgricultura</a></li>
+        <li><a href="#">{{ 'red.hashtag.organic' | translate }}</a></li>
+        <li><a href="#">{{ 'red.hashtag.tomato' | translate }}</a></li>
+        <li><a href="#">{{ 'red.hashtag.winterPests' | translate }}</a></li>
+        <li><a href="#">{{ 'red.hashtag.drones' | translate }}</a></li>
       </ul>
     </div>
 
     <div class="sidebar-card suggested-users">
-      <h3 i18n="@@red.suggestedFarmers">Suggested Farmers</h3>
+      <h3>{{ 'red.suggestedFarmers' | translate }}</h3>
       <ul class="users-list">
         <li><span class="user-avatar">A</span> Ana Gómez</li>
         <li><span class="user-avatar">R</span> Roberto Salas</li>
       </ul>
     </div>
-  </div>
+  </aside>
 </div>

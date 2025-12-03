@@ -1,155 +1,226 @@
-/* Estilos Generales */
+.registro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .page-title {
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: #333;
-  font-size: 26px;
+  margin-bottom: 8px;
 }
 
-.subtitle {
-  margin-bottom: 30px;
-  color: #6c757d;
-  font-size: 15px;
-}
-
-.section-title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-/* ----------------------------------------------------- */
-/* 1. Controles de Filtrado */
-/* ----------------------------------------------------- */
 .filter-controls {
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
 }
 
-.filter-select, .filter-button {
-  padding: 8px 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: white;
-  cursor: pointer;
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d7e3e2;
+  background-color: #fff;
 }
 
 .filter-button {
-  background-color: #00564e;
-  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
   border: none;
+  background-color: #1a4f4d;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-/* ----------------------------------------------------- */
-/* 2. Tarjetas de Resumen */
-/* ----------------------------------------------------- */
+.filter-button.active {
+  background-color: #4caf50;
+  transform: translateY(-1px);
+}
+
+.custom-filter-panel {
+  background: #f0fbf8;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #d4ece5;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.panel-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.custom-applied {
+  color: #1a4f4d;
+  font-weight: 500;
+}
+
 .summary-cards {
   display: grid;
-  /* Divide el espacio en 4 columnas iguales */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 .summary-card {
-  background-color: #f0f7f7; /* Color de fondo claro, similar a tu captura */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
 }
 
 .card-label {
-  margin: 0;
-  color: #666;
-  font-size: 14px;
+  color: #6a7b79;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
 }
 
 .card-value {
-  margin: 5px 0 0;
-  font-size: 30px;
-  font-weight: bold;
-  color: #00564e;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a4f4d;
 }
 
-/* ----------------------------------------------------- */
-/* 3. Gráficos Interactivos */
-/* ----------------------------------------------------- */
+.card-trend {
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.chart-section .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-hint {
+  color: #5f6e6b;
+}
+
 .interactive-charts {
   display: grid;
-  /* Divide el espacio en 3 columnas iguales */
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .chart-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
 }
 
 .chart-title {
   margin: 0;
-  color: #333;
-  font-size: 18px;
-}
-
-.chart-subtitle {
-  margin: 0 0 10px;
-  font-size: 12px;
-  color: #a0a0a0;
+  font-size: 1.1rem;
 }
 
 .chart-value {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00564e;
-  margin: 5px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a4f4d;
 }
 
 .change {
-  font-size: 14px;
-  color: #28a745; /* Verde para el aumento */
-  font-weight: normal;
+  font-size: 0.9rem;
+  color: #4caf50;
+  margin-left: 6px;
 }
 
 .chart-placeholder {
-  height: 120px; /* Altura para simular el área del gráfico */
-  background-color: #f8f8f8;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  font-style: italic;
-  font-size: 12px;
-}
-
-.chart-x-axis {
+  border-radius: 12px;
+  border: 1px dashed #cdd7d5;
+  padding: 24px;
   text-align: center;
-  font-size: 11px;
-  color: #777;
+  color: #8aa3a0;
+  font-style: italic;
+  margin: 12px 0;
 }
 
-/* Estilo para las barras en el gráfico de Eventos/Acciones */
 .event-chart-data {
-  height: auto;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  background-color: white;
+  gap: 6px;
 }
 
 .event-bar {
-  background-color: #00564e; /* El color de la barra */
+  background-color: #1a4f4d;
   color: white;
-  font-size: 10px;
-  padding: 3px 5px;
-  margin-bottom: 5px;
-  border-radius: 2px;
-  max-width: 100%;
-  /* Alineación de texto y altura para simular las barras */
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.timeline-section {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  border-left: 4px solid #1a4f4d;
+  background: #f7fbfa;
+}
+
+.timeline-item.alert {
+  border-left-color: #d32f2f;
+}
+
+.timeline-item.success {
+  border-left-color: #4caf50;
+}
+
+.timeline-time {
+  font-weight: 600;
+  color: #1a4f4d;
+  min-width: 70px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 4px;
+}
+
+.timeline-empty {
+  color: #5f6e6b;
+}
+
+@media (max-width: 640px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-field {
+    width: 100%;
+  }
 }

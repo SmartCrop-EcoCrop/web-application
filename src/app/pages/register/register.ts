@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-register',
@@ -8,8 +8,7 @@ import { TranslateDirective, TranslatePlaceholderDirective } from '../../directi
 
   imports: [
     RouterModule,
-    TranslateDirective,
-    TranslatePlaceholderDirective
+    TranslatePipe
   ],
 
   templateUrl: './register.html',

@@ -3,59 +3,59 @@
 
     <div class="footer-column brand-info">
       <div class="footer-logo">
-        <img src="assets/smartcrop_logo.png" alt="SmartCrop Logo" class="logo-image">
+        <img src="assets/smartcrop_logo.png" [attr.alt]="'footer.logoAlt' | translate" class="logo-image">
       </div>
 
       <p class="contact-item">
-        <span class="icon">📧</span> contacto@ecoscorp.com
+        <span class="icon">📧</span> {{ 'footer.contactEmail' | translate }}
       </p>
       <p class="contact-item">
-        <span class="icon">📞</span> +51 978 777 586
+        <span class="icon">📞</span> {{ 'footer.contactPhone' | translate }}
       </p>
     </div>
 
     <div class="footer-column">
-      <h4 class="column-title">Secciones</h4>
+      <h4 class="column-title">{{ 'footer.sectionsTitle' | translate }}</h4>
       <ul class="link-list">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Cómo funciona</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">{{ 'footer.sections.home' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.sections.howItWorks' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.sections.services' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.sections.about' | translate }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h4 class="column-title">Ayuda</h4>
+      <h4 class="column-title">{{ 'footer.helpTitle' | translate }}</h4>
       <ul class="link-list">
-        <li><a href="#">Preguntas frecuentes</a></li>
-        <li><a href="#">Términos de servicio</a></li>
-        <li><a href="#">Reportar un problema</a></li>
-        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">{{ 'footer.help.faq' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.help.terms' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.help.report' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.help.privacy' | translate }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h4 class="column-title">Servicios</h4>
+      <h4 class="column-title">{{ 'footer.servicesTitle' | translate }}</h4>
       <ul class="link-list">
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Chat</a></li>
-        <li><a href="#">Clima</a></li>
-        <li><a href="#">Noticias</a></li>
+        <li><a href="#">{{ 'footer.services.products' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.services.chat' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.services.weather' | translate }}</a></li>
+        <li><a href="#">{{ 'footer.services.news' | translate }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column social-media">
-      <h4 class="column-title">Redes Sociales</h4>
+      <h4 class="column-title">{{ 'footer.socialTitle' | translate }}</h4>
       <ul class="link-list">
-        <li><a href="#"><span class="social-icon">Ⓕ</span> Facebook</a></li>
-        <li><a href="#"><span class="social-icon">𝓧</span> Twitter</a></li>
-        <li><a href="#"><span class="social-icon">📸</span> Instagram</a></li>
-        <li><a href="#"><span class="social-icon">▶️</span> YouTube</a></li>
+        <li><a href="#"><span class="social-icon">Ⓕ</span> {{ 'footer.social.facebook' | translate }}</a></li>
+        <li><a href="#"><span class="social-icon">𝓧</span> {{ 'footer.social.twitter' | translate }}</a></li>
+        <li><a href="#"><span class="social-icon">📸</span> {{ 'footer.social.instagram' | translate }}</a></li>
+        <li><a href="#"><span class="social-icon">▶️</span> {{ 'footer.social.youtube' | translate }}</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© Todos los derechos reservados a Green Sprout Innovations</p>
+    <p>{{ 'footer.rights' | translate }}</p>
   </div>
 </footer>

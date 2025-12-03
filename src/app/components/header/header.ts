@@ -1,17 +1,31 @@
 // src/app/components/header/header.ts
 
-import { Component } from '@angular/core';
-// Importa las herramientas de routing
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LanguageSelectorComponent } from '../language-selector/language-selector'; // ¡IMPORTA ESTO!
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { LanguageSelectorComponent } from '../language-selector/language-selector';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  // ¡CRUCIAL! Asegúrate de incluir RouterModule aquí para que routerLink funcione.
-  imports: [RouterModule, LanguageSelectorComponent, TranslateDirective, TranslatePlaceholderDirective],
+  imports: [RouterModule, LanguageSelectorComponent, TranslatePipe],
   templateUrl: './header.html',
   styleUrls: ['./header.css']
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Output() sidebarToggle = new EventEmitter<void>();
+
+  navOpen = false;
+
+  toggleNav(): void {
+    this.navOpen = !this.navOpen;
+  }
+
+  closeNav(): void {
+    this.navOpen = false;
+  }
+
+  emitSidebarToggle(): void {
+    this.sidebarToggle.emit();
+  }
+}

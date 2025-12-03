@@ -1,61 +1,117 @@
 <div class="page-header">
-  <h1 i18n="@@realtime.title">Plant Monitoring</h1>
-  <p i18n="@@realtime.subtitle">View real-time images or recordings of your crops through IoT cameras.</p>
+  <h1>{{ 'realtime.title' | translate }}</h1>
+  <p>{{ 'realtime.subtitle' | translate }}</p>
 </div>
 
 <div class="realtime-layout">
   <div class="viewer-section">
     <div class="camera-viewer">
       <div class="viewer-modes">
-        <button class="mode-btn active" i18n="@@realtime.snapshot">Snapshot</button>
-        <button class="mode-btn" i18n="@@realtime.imageHistory">Image History</button>
+        @for (mode of modes; track mode.id) {
+          <button
+            type="button"
+            class="mode-btn"
+            [class.active]="mode.id === activeMode"
+            (click)="selectMode(mode.id)"
+            [attr.aria-pressed]="mode.id === activeMode"
+          >
+            {{ mode.labelKey | translate }}
+          </button>
+        }
       </div>
       <img src="../../../assets/cultivo_tiempo_real.jpg" alt="Cultivo en tiempo real" class="main-image">
     </div>
 
     <div class="metadata-card sidebar-card">
-      <h3 class="card-title" i18n="@@realtime.metadata">Image Metadata</h3>
-      <p class="metadata-date">26 de Julio, 2024 - 10:30 AM</p>
+      <h3 class="card-title">{{ 'realtime.metadata' | translate }}</h3>
+      <p class="metadata-date">{{ 'realtime.metadataDate' | translate }}</p>
 
       <div class="metadata-item">
         <span class="status-dot"></span>
-        <p class="status-label" i18n="@@realtime.waterStress">Possible Water Stress</p>
-        <p class="status-desc" i18n="@@realtime.stressDesc">Detected in the upper right quadrant.</p>
+        <p class="status-label">{{ 'realtime.waterStress' | translate }}</p>
+        <p class="status-desc">{{ 'realtime.stressDesc' | translate }}</p>
       </div>
 
       <div class="metadata-item">
         <span class="status-dot healthy"></span>
-        <p class="status-label" i18n="@@realtime.healthyGrowth">Healthy Growth</p>
-        <p class="status-desc" i18n="@@realtime.healthyDesc">Normal cell growth in 80% of the crop.</p>
+        <p class="status-label">{{ 'realtime.healthyGrowth' | translate }}</p>
+        <p class="status-desc">{{ 'realtime.healthyDesc' | translate }}</p>
       </div>
+
+      <p class="mode-description" aria-live="polite">
+        {{ activeModeDescription | translate }}
+      </p>
     </div>
   </div>
 
   <div class="camera-controls">
-    <h2 i18n="@@realtime.cameraControls">Camera Controls</h2>
+    <h2>{{ 'realtime.cameraControls' | translate }}</h2>
     <div class="control-buttons">
-      <button class="control-btn" i18n="@@realtime.zoom">Zoom</button>
-      <button class="control-btn" i18n="@@realtime.contrast">Contrast</button>
-      <button class="control-btn" i18n="@@realtime.pause">Pause/Capture</button>
-      <button class="control-btn" i18n="@@realtime.brightness">Brightness</button>
+      @for (btn of controlButtons; track btn.type) {
+        <button
+          type="button"
+          class="control-btn"
+          (click)="adjustControl(btn.type)"
+          [class.is-toggle]="btn.type === 'pause'"
+          [attr.aria-pressed]="btn.type === 'pause' ? controlSettings.paused : null"
+        >
+          {{ btn.labelKey | translate }}
+        </button>
+      }
+    </div>
+    <p class="control-hint">{{ 'realtime.controlHint' | translate }}</p>
+    <div class="control-readout" aria-live="polite">
+      <div class="readout-item">
+        <span class="label">{{ 'realtime.activeModeLabel' | translate }}</span>
+        <span class="value">
+          {{ (activeMode === 'snapshot' ? 'realtime.snapshot' : 'realtime.imageHistory') | translate }}
+        </span>
+      </div>
+      <div class="readout-item">
+        <span class="label">{{ 'realtime.zoomLevel' | translate }}</span>
+        <span class="value">{{ controlSettings.zoom | number:'1.1-1' }}x</span>
+      </div>
+      <div class="readout-item">
+        <span class="label">{{ 'realtime.contrastLevel' | translate }}</span>
+        <span class="value">{{ controlSettings.contrast }}%</span>
+      </div>
+      <div class="readout-item">
+        <span class="label">{{ 'realtime.brightnessLevel' | translate }}</span>
+        <span class="value">{{ controlSettings.brightness }}%</span>
+      </div>
+      <div class="readout-item">
+        <span class="label">{{ 'realtime.pauseState' | translate }}</span>
+        <span class="value">
+          {{ (controlSettings.paused ? 'realtime.paused' : 'realtime.playing') | translate }}
+        </span>
+      </div>
     </div>
   </div>
 
   <div class="camera-selection">
-    <h2 i18n="@@realtime.selectCamera">Select camera</h2>
+    <h2>{{ 'realtime.selectCamera' | translate }}</h2>
     <div class="camera-previews">
-      <div class="preview-card active">
-        <img src="assets/camera_preview_a.jpg" alt="Zona A">
-        <p i18n="@@realtime.zoneA">Zone A</p>
-      </div>
-      <div class="preview-card">
-        <img src="assets/camera_preview_b.jpg" alt="Zona B">
-        <p i18n="@@realtime.zoneB">Zone B</p>
-      </div>
-      <div class="preview-card">
-        <img src="assets/camera_preview_c.jpg" alt="Zona C">
-        <p i18n="@@realtime.zoneC">Zone C</p>
-      </div>
+      @for (preview of cameraPreviews; track preview.id) {
+        <button
+          type="button"
+          class="preview-card"
+          [class.active]="preview.id === selectedCameraId"
+          (click)="selectCamera(preview.id)"
+          [attr.aria-pressed]="preview.id === selectedCameraId"
+        >
+          <img [src]="preview.image" alt="" aria-hidden="true">
+          <p>{{ preview.labelKey | translate }}</p>
+          <span class="preview-metrics">{{ preview.temperature }} · {{ preview.humidity }}</span>
+        </button>
+      }
+    </div>
+    <div class="selection-summary">
+      <h3>{{ 'realtime.activeCameraLabel' | translate }}</h3>
+      <p class="selection-name">{{ selectedCamera.labelKey | translate }}</p>
+      <p class="selection-metrics">
+        {{ 'realtime.cameraMetrics' | translate }}:
+        <strong>{{ selectedCamera.temperature }}</strong> · <strong>{{ selectedCamera.humidity }}</strong>
+      </p>
     </div>
   </div>
 </div>

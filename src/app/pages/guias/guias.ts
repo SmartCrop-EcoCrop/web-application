@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-guias',
   standalone: true,
 
-  imports: [CommonModule, TranslateDirective, TranslatePlaceholderDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './guias.html',
   styleUrls: ['./guias.css']
 })

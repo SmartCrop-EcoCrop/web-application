@@ -1,29 +1,50 @@
 <header class="app-header">
+  <button class="menu-toggle" type="button" (click)="toggleNav()" [attr.aria-expanded]="navOpen">
+    <span class="menu-toggle__icon">☰</span>
+    <span class="visually-hidden">{{ 'header.toggleNav' | translate }}</span>
+  </button>
+
   <div class="header-logo">
     <span class="logo-icon">🌿</span>
     SmartCrop
   </div>
 
-  <nav class="header-nav">
-    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-link" i18n="@@header.dashboard">Dashboard</a>
-    <a routerLink="/app/foro" routerLinkActive="active" class="nav-link" i18n="@@header.forum">Forum</a>
-    <a routerLink="/app/clima" routerLinkActive="active" class="nav-link" i18n="@@header.weather">Weather</a>
-    <a routerLink="/app/noticias" routerLinkActive="active" class="nav-link" i18n="@@header.news">News</a>
+  <nav class="header-nav" [class.open]="navOpen">
+    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-link" (click)="closeNav()">
+      {{ 'header.dashboard' | translate }}
+    </a>
+    <a routerLink="/app/foro" routerLinkActive="active" class="nav-link" (click)="closeNav()">
+      {{ 'header.forum' | translate }}
+    </a>
+    <a routerLink="/app/clima" routerLinkActive="active" class="nav-link" (click)="closeNav()">
+      {{ 'header.weather' | translate }}
+    </a>
+    <a routerLink="/app/noticias" routerLinkActive="active" class="nav-link" (click)="closeNav()">
+      {{ 'header.news' | translate }}
+    </a>
   </nav>
 
   <div class="header-actions">
+    <button class="sidebar-toggle" type="button" (click)="emitSidebarToggle()">
+      <span class="sidebar-toggle__icon">🧭</span>
+      <span class="visually-hidden">{{ 'header.toggleSidebar' | translate }}</span>
+    </button>
 
     <app-language-selector></app-language-selector>
 
     <div class="search-container">
       <span class="search-icon">🔍</span>
-      <input type="text" i18n-placeholder="@@header.search" placeholder="Search">
+      <input type="text" [placeholder]="'header.search' | translate">
     </div>
 
-    <span class="notification-icon">🔔</span>
+    <button class="notification-icon" type="button">
+      🔔
+      <span class="visually-hidden">{{ 'header.notifications' | translate }}</span>
+    </button>
 
     <a routerLink="/app/profile" class="profile-link">
       <img src="assets/avatar.jpg" alt="Usuario" class="profile-avatar">
+      <span class="visually-hidden">{{ 'sidebar.perfil' | translate }}</span>
     </a>
   </div>
 </header>

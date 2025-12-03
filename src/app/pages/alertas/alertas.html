@@ -1,6 +1,6 @@
 <div class="page-header">
-  <h1 i18n="@@alertas.title">Alerts and Notifications</h1>
-  <p i18n="@@alertas.subtitle">Monitor critical events and recommendations for your crops.</p>
+  <h1>{{ 'alertas.title' | translate }}</h1>
+  <p>{{ 'alertas.subtitle' | translate }}</p>
 </div>
 
 <div class="alerts-layout">
@@ -8,43 +8,43 @@
   <div class="main-alerts-content">
 
     <div class="tabs-container">
-      <span class="tab active" i18n="@@alertas.tabClimate">Climate</span>
-      <span class="tab" i18n="@@alertas.tabPests">Pests</span>
-      <span class="tab" i18n="@@alertas.tabHumidity">Humidity</span>
-      <span class="tab" i18n="@@alertas.tabActions">Actions</span>
-      <span class="tab" i18n="@@alertas.tabGeneral">General</span>
+      <span class="tab active">{{ 'alertas.tabClimate' | translate }}</span>
+      <span class="tab">{{ 'alertas.tabPests' | translate }}</span>
+      <span class="tab">{{ 'alertas.tabHumidity' | translate }}</span>
+      <span class="tab">{{ 'alertas.tabActions' | translate }}</span>
+      <span class="tab">{{ 'alertas.tabGeneral' | translate }}</span>
     </div>
 
     <div class="alert-timeline">
       <div class="alert-item warning">
         <span class="icon">🔴</span>
         <div class="alert-details">
-          <p class="alert-title" i18n="@@alertas.lowHumidity">Low Humidity</p>
-          <p class="alert-message" i18n="@@alertas.lowHumidityDesc">Low humidity levels were detected in sector B. Immediate irrigation is recommended.</p>
-          <span class="alert-time">30 de Julio, 2024 - 10:00 AM</span>
+          <p class="alert-title">{{ 'alertas.lowHumidity' | translate }}</p>
+          <p class="alert-message">{{ 'alertas.lowHumidityDesc' | translate }}</p>
+          <span class="alert-time">{{ 'alertas.lowHumidityTime' | translate }}</span>
         </div>
-        <span class="alert-tag urgent" i18n="@@alertas.urgent">Urgent</span>
+        <span class="alert-tag urgent">{{ 'alertas.urgent' | translate }}</span>
       </div>
 
     </div>
 
     <div class="alerts-history">
-      <h2 i18n="@@alertas.alertHistory">Alert History</h2>
+      <h2>{{ 'alertas.alertHistory' | translate }}</h2>
 
       <div class="history-item">
         <span class="history-icon">🌡️</span>
         <div class="history-details">
-          <p class="history-title" i18n="@@alertas.highTemp">High Temperature</p>
-          <p class="history-time">19 de Julio, 2024 - 14:45 PM</p>
-          <p class="history-desc" i18n="@@alertas.highTempDesc">Temperature in sector B exceeded 35°C. It is recommended to activate the sprinkler irrigation system.</p>
+          <p class="history-title">{{ 'alertas.highTemp' | translate }}</p>
+          <p class="history-time">{{ 'alertas.highTempTime' | translate }}</p>
+          <p class="history-desc">{{ 'alertas.highTempDesc' | translate }}</p>
         </div>
       </div>
       <div class="history-item">
         <span class="history-icon">🪰</span>
         <div class="history-details">
-          <p class="history-title" i18n="@@alertas.whitefly">Whitefly</p>
-          <p class="history-time">19 de Julio, 2024 - 11:20 AM</p>
-          <p class="history-desc" i18n="@@alertas.whiteflyDesc">An increase in the whitefly population was detected in the pepper crop. Preventive treatment is recommended.</p>
+          <p class="history-title">{{ 'alertas.whitefly' | translate }}</p>
+          <p class="history-time">{{ 'alertas.whiteflyTime' | translate }}</p>
+          <p class="history-desc">{{ 'alertas.whiteflyDesc' | translate }}</p>
         </div>
       </div>
     </div>
@@ -52,18 +52,18 @@
 
   <div class="alerts-sidebar">
     <div class="sidebar-card live-alert">
-      <p class="live-tag" i18n="@@alertas.realTimeAlert">Real-time Alert</p>
-      <h3 class="live-title error" i18n="@@alertas.frostAlert">Frost Alert</h3>
-      <p class="live-desc" i18n="@@alertas.frostAlertDesc">A severe frost is expected in the next 3 hours. Protect your crops.</p>
+      <p class="live-tag">{{ 'alertas.realTimeAlert' | translate }}</p>
+      <h3 class="live-title error">{{ 'alertas.frostAlert' | translate }}</h3>
+      <p class="live-desc">{{ 'alertas.frostAlertDesc' | translate }}</p>
       <img src="assets/campo_helada.jpg" alt="Campo con escarcha">
-      <button class="btn-details" i18n="@@alertas.viewDetails">View Details →</button>
+      <button class="btn-details">{{ 'alertas.viewDetails' | translate }}</button>
     </div>
 
     <div class="sidebar-card config-card">
-      <h3 i18n="@@alertas.config">Configuration</h3>
+      <h3>{{ 'alertas.config' | translate }}</h3>
       <ul class="config-list">
-        <li><a href="#" i18n="@@alertas.customizeNotif">Customize Notifications</a></li>
-        <li><a href="#" i18n="@@alertas.viewFullHistory">View Full History</a></li>
+        <li><a href="#">{{ 'alertas.customizeNotif' | translate }}</a></li>
+        <li><a href="#">{{ 'alertas.viewFullHistory' | translate }}</a></li>
       </ul>
     </div>
   </div>

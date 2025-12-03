@@ -1,16 +1,22 @@
 <div class="app-container">
 
   <header class="app-header">
-    <app-header></app-header>
+    <app-header (sidebarToggle)="toggleSidebar()"></app-header>
   </header>
 
-  <aside class="app-sidebar">
-    <app-sidebar></app-sidebar>
+  <aside class="app-sidebar" [class.open]="isSidebarOpen">
+    <app-sidebar (itemSelected)="closeSidebar()"></app-sidebar>
   </aside>
 
   <main class="app-content">
     <router-outlet></router-outlet>
   </main>
 
+</div>
+<div 
+  class="sidebar-overlay" 
+  *ngIf="isSidebarOpen" 
+  (click)="closeSidebar()"
+  aria-hidden="true">
 </div>
 <app-footer></app-footer>

@@ -1,5 +1,5 @@
 <div class="language-selector">
-  <label for="language-select">Language / Idioma:</label>
+  <label for="language-select">{{ 'language.label' | translate }}</label>
   <select 
     id="language-select"
     [value]="currentLanguage$()"
@@ -7,7 +7,7 @@
     class="language-dropdown"
   >
     @for (lang of languages; track lang) {
-      <option [value]="lang">{{ getLanguageLabel(lang) }}</option>
+      <option [value]="lang">{{ getLanguageLabel(lang) | translate }}</option>
     }
   </select>
 </div>

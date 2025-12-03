@@ -1,25 +1,27 @@
 <div class="access-container">
   <div class="access-box">
-    <h1 class="access-title" i18n="@@login.title">Sign In</h1>
+    <h1 class="access-title">{{ 'login.title' | translate }}</h1>
 
     <div class="access-content">
       <form class="access-form">
 
-        <label for="username" i18n="@@login.username">Username</label>
-        <input type="text" id="username" i18n-placeholder="@@login.usernameP" placeholder="Enter your username" required>
+        <label for="username">{{ 'login.username' | translate }}</label>
+        <input type="text" id="username" [placeholder]="'login.usernameP' | translate" required>
 
-        <label for="password" i18n="@@login.password">Password</label>
-        <input type="password" id="password" i18n-placeholder="@@login.passwordP" placeholder="Enter your password" required>
+        <label for="password">{{ 'login.password' | translate }}</label>
+        <input type="password" id="password" [placeholder]="'login.passwordP' | translate" required>
 
         <div class="remember-me">
           <div>
             <input type="checkbox" id="remember">
-            <label for="remember" class="checkbox-label" i18n="@@login.remember">Remember me</label>
+            <label for="remember" class="checkbox-label">{{ 'login.remember' | translate }}</label>
           </div>
-          <a href="#" class="forgot-link" i18n="@@login.forgot">Forgot your password?</a>
+          <a href="#" class="forgot-link">{{ 'login.forgot' | translate }}</a>
         </div>
 
-        <button type="submit" class="btn-primary" (click)="goToDashboard()" i18n="@@login.button">Sign In</button>
+        <button type="submit" class="btn-primary" (click)="goToDashboard()">
+          {{ 'login.button' | translate }}
+        </button>
       </form>
 
       <div class="image-container">
@@ -28,8 +30,8 @@
     </div>
 
     <p class="register-link-text">
-      <span i18n="@@login.noAccount">Don't have an account?</span>
-      <a routerLink="/acceso/register" i18n="@@login.register">Register</a>
+      <span>{{ 'login.noAccount' | translate }}</span>
+      <a routerLink="/acceso/register">{{ 'login.register' | translate }}</a>
     </p>
   </div>
 </div>

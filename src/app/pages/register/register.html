@@ -1,23 +1,25 @@
 <div class="access-container">
   <div class="access-box">
-    <h1 class="access-title" i18n="@@register.title">Create Account</h1>
+    <h1 class="access-title">{{ 'register.title' | translate }}</h1>
 
     <div class="access-content">
       <form class="access-form">
 
-        <label for="username" i18n="@@register.username">Username</label>
-        <input type="text" id="username" i18n-placeholder="@@register.username" placeholder="Username" required>
+        <label for="username">{{ 'register.username' | translate }}</label>
+        <input type="text" id="username" [placeholder]="'register.username' | translate" required>
 
-        <label for="email" i18n="@@register.email">Email</label>
-        <input type="email" id="email" i18n-placeholder="@@register.email" placeholder="Email" required>
+        <label for="email">{{ 'register.email' | translate }}</label>
+        <input type="email" id="email" [placeholder]="'register.email' | translate" required>
 
-        <label for="password" i18n="@@register.password">Password</label>
-        <input type="password" id="password" i18n-placeholder="@@register.password" placeholder="Password" required>
+        <label for="password">{{ 'register.password' | translate }}</label>
+        <input type="password" id="password" [placeholder]="'register.password' | translate" required>
 
-        <label for="confirm-password" i18n="@@register.confirmPassword">Confirm Password</label>
-        <input type="password" id="confirm-password" i18n-placeholder="@@register.confirmPassword" placeholder="Confirm Password" required>
+        <label for="confirm-password">{{ 'register.confirmPassword' | translate }}</label>
+        <input type="password" id="confirm-password" [placeholder]="'register.confirmPassword' | translate" required>
 
-        <button type="submit" class="btn-primary" routerLink="/acceso/login" i18n="@@register.button">Register</button>
+        <button type="submit" class="btn-primary" routerLink="/acceso/login">
+          {{ 'register.button' | translate }}
+        </button>
       </form>
 
       <div class="image-container">
@@ -26,8 +28,8 @@
     </div>
 
     <p class="register-link-text">
-      <span i18n="@@register.haveAccount">Already have an account?</span>
-      <a routerLink="/acceso/login" i18n="@@register.login">Sign In</a>
+      <span>{{ 'register.haveAccount' | translate }}</span>
+      <a routerLink="/acceso/login">{{ 'register.login' | translate }}</a>
     </p>
   </div>
 </div>

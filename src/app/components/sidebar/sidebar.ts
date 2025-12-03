@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router'; // <-- ¡IMPORTA ESTO!
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true, // <-- Asumo que es Standalone
   imports: [
     RouterModule,
-    TranslateDirective,
-    TranslatePlaceholderDirective
+    TranslatePipe
   ],
   templateUrl: './sidebar.html',
   styleUrls: ['./sidebar.css']
 })
 export class SidebarComponent {
-  // ...
+  @Output() itemSelected = new EventEmitter<void>();
+
+  handleItemSelected(): void {
+    this.itemSelected.emit();
+  }
 }

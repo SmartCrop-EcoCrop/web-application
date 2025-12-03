@@ -108,9 +108,13 @@
   color: white;
   cursor: pointer;
   transition: color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
-.notification-icon:hover {
+.notification-icon:hover,
+.notification-icon:focus-visible {
   color: #4caf50;
 }
 
@@ -137,16 +141,52 @@
   font-size: 24px;
   cursor: pointer;
   padding: 4px 8px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  align-items: center;
 }
 
 .menu-toggle:hover {
   color: #4caf50;
+  transform: scale(1.05);
+}
+
+.menu-toggle__icon {
+  line-height: 1;
+}
+
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-toggle__icon {
+  font-size: 18px;
 }
 
 /*==========================================
   RESPONSIVE DESIGN
 ==========================================*/
+
+@media (max-width: 1024px) {
+  .sidebar-toggle {
+    display: inline-flex;
+  }
+}
 
 /* Tablets (768px and up) */
 @media (min-width: 768px) {
@@ -309,5 +349,10 @@
   .profile-avatar {
     width: 30px;
     height: 30px;
+  }
+
+  .sidebar-toggle {
+    padding: 4px 8px;
+    font-size: 14px;
   }
 }

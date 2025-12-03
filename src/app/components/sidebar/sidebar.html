@@ -1,56 +1,56 @@
 <nav class="sidebar-nav">
-  <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">🌡️</i>
-    <span i18n="@@sidebar.temperature">Temperature</span>
+    <span>{{ 'sidebar.temperature' | translate }}</span>
   </a>
 
-  <a routerLink="/app/real-time" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/real-time" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">📷</i>
-    <span i18n="@@sidebar.realTime">View plants in real time</span>
+    <span>{{ 'sidebar.realTime' | translate }}</span>
   </a>
 
-  <a routerLink="/app/temporal-registro" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/temporal-registro" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">📅</i>
-    <span i18n="@@sidebar.temporal">View temporal record</span>
+    <span>{{ 'sidebar.temporal' | translate }}</span>
   </a>
 
-  <a routerLink="/app/plagas" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/plagas" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">🐞</i>
-    <span i18n="@@sidebar.plagas">Pest Identification</span>
+    <span>{{ 'sidebar.plagas' | translate }}</span>
   </a>
 
-  <a routerLink="/app/alertas" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/alertas" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">🔔</i>
-    <span i18n="@@sidebar.alertas">Alerts and notifications</span>
+    <span>{{ 'sidebar.alertas' | translate }}</span>
   </a>
 
-  <a routerLink="/app/red-agricultores" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/red-agricultores" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">🧑‍🤝‍🧑</i>
-    <span i18n="@@sidebar.redAgricultores">Farmers network</span>
+    <span>{{ 'sidebar.redAgricultores' | translate }}</span>
   </a>
 
-  <a routerLink="/app/guias" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/guias" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">📖</i>
-    <span i18n="@@sidebar.guias">Practical guides and recommendations</span>
+    <span>{{ 'sidebar.guias' | translate }}</span>
   </a>
 
-  <a routerLink="/app/profile" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/profile" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">👤</i>
-    <span i18n="@@sidebar.perfil">Profile</span>
+    <span>{{ 'sidebar.perfil' | translate }}</span>
   </a>
 
-  <a routerLink="/app/foro" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/foro" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">💬</i>
-    <span i18n="@@sidebar.foro">Forum</span>
+    <span>{{ 'sidebar.foro' | translate }}</span>
   </a>
 
-  <a routerLink="/app/clima" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/clima" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">🌤️</i>
-    <span i18n="@@sidebar.clima">Weather</span>
+    <span>{{ 'sidebar.clima' | translate }}</span>
   </a>
 
-  <a routerLink="/app/noticias" routerLinkActive="active" class="nav-item">
+  <a routerLink="/app/noticias" routerLinkActive="active" class="nav-item" (click)="handleItemSelected()">
     <i class="icon">📰</i>
-    <span i18n="@@sidebar.noticias">News</span>
+    <span>{{ 'sidebar.noticias' | translate }}</span>
   </a>
 </nav>

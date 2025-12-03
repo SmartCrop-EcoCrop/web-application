@@ -1,109 +1,163 @@
-/* Layout Principal */
 .red-layout {
-  display: flex;
-  gap: 30px;
-  padding: 20px;
-}
-.main-forum-content {
-  flex-grow: 1;
-  max-width: 65%;
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: flex-start;
 }
 
-/* Tarjeta de Nueva Publicación */
+.main-forum-content,
+.red-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .new-post-card {
   background: white;
-  border: 1px solid #eee;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
-}
-.new-post-card textarea {
-  width: 100%;
-  min-height: 80px;
-  border: none;
-  outline: none;
-  resize: none;
-  padding: 10px 0;
-  font-size: 15px;
-  border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 10px;
-}
-.post-actions {
-  text-align: right;
-}
-.btn-primary.small {
-  padding: 8px 15px;
-  font-size: 14px;
-  width: auto;
-  margin-top: 0;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Estilo de Publicación */
+.new-post-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.new-post-field select,
+.new-post-field textarea {
+  width: 100%;
+  border: 1px solid #d8e5e4;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+.new-post-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.char-count {
+  font-size: 0.85rem;
+  color: #6a7b79;
+}
+
+.feedback {
+  color: #1a4f4d;
+  font-weight: 500;
+}
+
 .post-item {
   background: white;
-  border: 1px solid #f0f0f0;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
+
 .post-header {
   display: flex;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 10px;
 }
+
 .user-avatar {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: #e8f5e9;
-  color: #008075;
+  background-color: #d6f1eb;
+  color: #00695c;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  margin-right: 10px;
-}
-.username {
   font-weight: 600;
-  color: #333;
-  margin: 0;
-}
-.post-time {
-  font-size: 12px;
-  color: #999;
-  margin: 0;
-}
-.post-stats span {
-  font-size: 14px;
-  color: #666;
-  margin-right: 15px;
 }
 
-/* Sidebar de Red de Agricultores */
+.post-info .username {
+  margin: 0;
+  font-weight: 600;
+}
+
+.post-time {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6a7b79;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-body {
+  margin: 0;
+  color: #4a5755;
+}
+
+.post-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #6a7b79;
+}
+
+.empty-state {
+  color: #6a7b79;
+}
+
 .red-sidebar {
-  width: 350px;
+  position: sticky;
+  top: 1rem;
 }
+
 .sidebar-card {
-  /* (Mismos estilos que en PlagasComponent) */
-  background-color: white;
+  background: white;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
 }
-.topics-list, .users-list {
+
+.topics-list,
+.users-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
+
 .topics-list a {
-  color: #008075;
+  color: #1a4f4d;
   text-decoration: none;
-  display: block;
-  padding: 5px 0;
 }
+
 .users-list li {
-  padding: 5px 0;
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1024px) {
+  .red-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .red-sidebar {
+    position: static;
+  }
 }

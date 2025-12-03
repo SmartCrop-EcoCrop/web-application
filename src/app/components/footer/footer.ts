@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [TranslateDirective, TranslatePlaceholderDirective],
+  imports: [TranslatePipe],
   templateUrl: './footer.html',
   styleUrls: ['./footer.css']
 })

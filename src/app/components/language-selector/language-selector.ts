@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { I18nService, type Language } from '../../services/i18n.service';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-language-selector',
   standalone: true,
-  imports: [CommonModule, TranslateDirective, TranslatePlaceholderDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './language-selector.html',
   styleUrl: './language-selector.css'
 })
@@ -23,6 +23,6 @@ export class LanguageSelectorComponent {
   }
 
   getLanguageLabel(language: Language): string {
-    return language === 'en-US' ? 'English' : 'Español';
+    return language === 'en-US' ? 'language.option.en' : 'language.option.es';
   }
 }

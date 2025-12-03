@@ -1,12 +1,12 @@
 // src/app/pages/foro/foro.ts
 
 import { Component } from '@angular/core';
-import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-foro',
   standalone: true,
-  imports: [TranslateDirective, TranslatePlaceholderDirective],
+  imports: [TranslatePipe],
 
   templateUrl: './foro.html',
   styleUrls: ['./foro.css']

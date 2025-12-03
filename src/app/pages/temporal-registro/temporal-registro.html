@@ -1,79 +1,141 @@
 <div class="registro-container">
-  <h1 class="page-title" i18n="@@temporal.title">Temporal Record</h1>
-  <p class="subtitle" i18n="@@temporal.subtitle">Access data history, statistics and events related to your crops, pests and temperature.</p>
+  <header class="page-header">
+    <h1 class="page-title">{{ 'temporal.title' | translate }}</h1>
+    <p class="subtitle">{{ 'temporal.subtitle' | translate }}</p>
+  </header>
 
   <div class="filter-controls">
-    <select class="filter-select">
-      <option i18n="@@temporal.thisWeek">This Week</option>
-    </select>
-    <select class="filter-select">
-      <option i18n="@@temporal.thisMonth">This Month</option>
-    </select>
-    <button class="filter-button" i18n="@@temporal.custom">Custom</button>
+    <label class="filter-field">
+      <span>{{ 'temporal.rangeLabel' | translate }}</span>
+      <select class="filter-select" [(ngModel)]="selectedRange" (ngModelChange)="onRangeChange($event)">
+        @for (option of timeRanges; track option.value) {
+          <option [value]="option.value">{{ option.labelKey | translate }}</option>
+        }
+        @if (customRangeApplied) {
+          <option value="custom">{{ 'temporal.custom' | translate }}</option>
+        }
+      </select>
+    </label>
+
+    <label class="filter-field">
+      <span>{{ 'temporal.metricLabel' | translate }}</span>
+      <select class="filter-select" [(ngModel)]="selectedMetric" (ngModelChange)="onMetricChange($event)">
+        @for (metric of metrics; track metric.value) {
+          <option [value]="metric.value">{{ metric.labelKey | translate }}</option>
+        }
+      </select>
+    </label>
+
+    <button
+      type="button"
+      class="filter-button"
+      [class.active]="showCustomFilters || customRangeApplied"
+      (click)="toggleCustomFilters()"
+    >
+      {{ 'temporal.custom' | translate }}
+    </button>
   </div>
+
+  <div class="custom-filter-panel" *ngIf="showCustomFilters">
+    <h3>{{ 'temporal.customRangeTitle' | translate }}</h3>
+    <div class="custom-grid">
+      <label>
+        <span>{{ 'temporal.from' | translate }}</span>
+        <input type="date" [(ngModel)]="customFilter.from">
+      </label>
+      <label>
+        <span>{{ 'temporal.to' | translate }}</span>
+        <input type="date" [(ngModel)]="customFilter.to">
+      </label>
+    </div>
+    <div class="panel-actions">
+      <button
+        type="button"
+        class="btn-secondary"
+        (click)="applyCustomRange()"
+        [disabled]="!customFilter.from || !customFilter.to"
+      >
+        {{ 'temporal.applyFilters' | translate }}
+      </button>
+      <button type="button" class="btn-outline" (click)="toggleCustomFilters(false)">
+        {{ 'temporal.cancel' | translate }}
+      </button>
+    </div>
+  </div>
+
+  <p class="custom-applied" *ngIf="customRangeApplied">
+    {{ 'temporal.customRangeApplied' | translate }}
+  </p>
 
   <div class="summary-cards">
-
-    <div class="summary-card">
-      <p class="card-label" i18n="@@temporal.avgTemp">Average Temperature</p>
-      <p class="card-value">25°C</p>
-    </div>
-
-    <div class="summary-card">
-      <p class="card-label" i18n="@@temporal.pestsDetected">Pests Detected</p>
-      <p class="card-value">3</p>
-    </div>
-
-    <div class="summary-card">
-      <p class="card-label" i18n="@@temporal.extremeConditions">Extreme Weather Conditions</p>
-      <p class="card-value">2</p>
-    </div>
-
-    <div class="summary-card">
-      <p class="card-label" i18n="@@temporal.alertsActions">Alerts/Actions</p>
-      <p class="card-value">5</p>
-    </div>
+    @for (card of summaryCards; track card.labelKey) {
+      <article class="summary-card">
+        <p class="card-label">{{ card.labelKey | translate }}</p>
+        <p class="card-value">{{ card.value }}</p>
+        <p class="card-trend" *ngIf="card.trend">{{ card.trend }}</p>
+      </article>
+    }
   </div>
 
-  <h2 class="section-title" i18n="@@temporal.charts">Interactive Charts</h2>
-
-  <div class="interactive-charts">
-
-    <div class="chart-card chart-line">
-      <p class="chart-title" i18n="@@temporal.temperature">Temperature</p>
-      <p class="chart-value">25°C <span class="change">+2%</span></p>
-      <p class="chart-subtitle" i18n="@@temporal.thisWeek">This Week</p>
-      <div class="chart-placeholder line-chart-data">
-        ~ GRÁFICO DE LÍNEAS AQUÍ ~
-      </div>
-      <div class="chart-x-axis">Lun Mar Mié Jue Vie Sáb Dom</div>
+  <section class="chart-section">
+    <div class="section-header">
+      <h2 class="section-title">{{ 'temporal.charts' | translate }}</h2>
+      <p class="chart-hint">{{ insightKey | translate }}</p>
     </div>
 
-    <div class="chart-card chart-bar">
-      <p class="chart-title" i18n="@@temporal.pests">Pests</p>
-      <p class="chart-value">3</p>
-      <p class="chart-subtitle" i18n="@@temporal.thisMonth">This Month</p>
-      <div class="chart-placeholder bar-chart-data">
-        ~ GRÁFICO DE BARRAS AQUÍ ~
-      </div>
-      <div class="chart-x-axis">Ene Feb Mar Abr May Jun</div>
-    </div>
+    <div class="interactive-charts">
 
-    <div class="chart-card chart-events">
-      <p class="chart-title" i18n="@@temporal.events">Events/Actions</p>
-      <p class="chart-value">5</p>
-      <p class="chart-subtitle" i18n="@@temporal.thisMonth">This Month</p>
-      <div class="chart-placeholder event-chart-data">
-        <div class="event-bar" style="width: 80%;">Ene</div>
-        <div class="event-bar" style="width: 50%;">Feb</div>
-        <div class="event-bar" style="width: 30%;">Mar</div>
-        <div class="event-bar" style="width: 70%;">Abr | Jul</div>
-        <div class="event-bar" style="width: 40%;">May</div>
-        <div class="event-bar" style="width: 60%;">Jun</div>
-        <div class="event-bar" style="width: 20%;">Jul</div>
-      </div>
-    </div>
-  </div>
+      <article class="chart-card chart-line">
+        <p class="chart-title">{{ 'temporal.temperature' | translate }}</p>
+        <p class="chart-value">25°C <span class="change">+2%</span></p>
+        <p class="chart-subtitle">{{ selectedRange === 'week' ? ('temporal.thisWeek' | translate) : ('temporal.thisMonth' | translate) }}</p>
+        <div class="chart-placeholder line-chart-data">
+          {{ 'temporal.temperatureSparkline' | translate }}
+        </div>
+        <div class="chart-x-axis">{{ 'temporal.axis.weekDays' | translate }}</div>
+      </article>
 
-  <h2 class="section-title" i18n="@@temporal.timeline">Timeline</h2>
+      <article class="chart-card chart-bar">
+        <p class="chart-title">{{ 'temporal.pests' | translate }}</p>
+        <p class="chart-value">11</p>
+        <p class="chart-subtitle">{{ 'temporal.thisMonth' | translate }}</p>
+        <div class="chart-placeholder bar-chart-data">
+          {{ 'temporal.pestDistribution' | translate }}
+        </div>
+        <div class="chart-x-axis">{{ 'temporal.axis.firstSemester' | translate }}</div>
+      </article>
+
+      <article class="chart-card chart-events">
+        <p class="chart-title">{{ 'temporal.events' | translate }}</p>
+        <p class="chart-value">18</p>
+        <p class="chart-subtitle">{{ 'temporal.thisMonth' | translate }}</p>
+        <div class="chart-placeholder event-chart-data">
+          <div class="event-bar" style="width: 80%;">{{ 'temporal.months.jan' | translate }}</div>
+          <div class="event-bar" style="width: 50%;">{{ 'temporal.months.feb' | translate }}</div>
+          <div class="event-bar" style="width: 30%;">{{ 'temporal.months.mar' | translate }}</div>
+          <div class="event-bar" style="width: 70%;">{{ 'temporal.months.apr' | translate }}</div>
+          <div class="event-bar" style="width: 40%;">{{ 'temporal.months.may' | translate }}</div>
+          <div class="event-bar" style="width: 60%;">{{ 'temporal.months.jun' | translate }}</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <h2 class="section-title">{{ 'temporal.timeline' | translate }}</h2>
+    <p class="timeline-empty" *ngIf="!(timelineEvents?.length)">
+      {{ 'temporal.noEvents' | translate }}
+    </p>
+    <ul class="timeline-list" *ngIf="timelineEvents?.length">
+      @for (event of timelineEvents; track event.id) {
+        <li class="timeline-item" [class.alert]="event.type === 'alert'" [class.success]="event.type === 'success'">
+          <div class="timeline-time">{{ event.time }}</div>
+          <div class="timeline-content">
+            <h3>{{ event.titleKey | translate }}</h3>
+            <p>{{ event.descriptionKey | translate }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+  </section>
 </div>
