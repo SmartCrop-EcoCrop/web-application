@@ -1,9 +1,11 @@
+# Redirige la raíz al idioma por defecto
 [[redirects]]
   from = "/"
   to = "/en-us/"
   status = 301
   force = true
 
+# Maneja las rutas de Angular (evita el 404 al recargar)
 [[redirects]]
   from = "/*"
   to = "/en-us/index.html"
