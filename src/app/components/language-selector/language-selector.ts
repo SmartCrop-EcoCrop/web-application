@@ -1,41 +1,28 @@
-// src/app/components/language-selector/language-selector.ts
-
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { I18nService, type Language } from '../../services/i18n.service';
+import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
 
 @Component({
   selector: 'app-language-selector',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateDirective, TranslatePlaceholderDirective],
   templateUrl: './language-selector.html',
-  styleUrls: ['./language-selector.css']
+  styleUrl: './language-selector.css'
 })
 export class LanguageSelectorComponent {
+  private i18nService = inject(I18nService);
+  
+  currentLanguage$ = this.i18nService.currentLanguage;
+  languages: Language[] = ['en-US', 'es-ES'];
 
-  changeLanguage(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const lang = target.value;
-
-    // Obtiene la URL actual del navegador
-    const currentPath = window.location.pathname;
-
-    // Define el nuevo prefijo de ruta (ej: /en-US)
-    const newPrefix = lang === 'es-CO' ? '' : `/${lang}`;
-
-    // Si la URL actual ya tiene un prefijo de idioma (ej: /en-US/app/dashboard),
-    // lo elimina y añade el nuevo. Si no tiene prefijo, lo añade.
-
-    let path = currentPath;
-
-    // Esta es una simplificación: asume que solo hay un prefijo de idioma o ninguno.
-    if (path.startsWith('/en-US')) {
-      path = path.replace('/en-US', '');
+  changeLanguage(language: Language): void {
+    if (language !== this.currentLanguage$()) {
+      this.i18nService.setLanguage(language);
     }
+  }
 
-    // La nueva URL completa
-    const newUrl = `${newPrefix}${path}`;
-
-    // Recarga la página con la nueva URL para que Angular cargue la versión traducida
-    window.location.href = newUrl;
+  getLanguageLabel(language: Language): string {
+    return language === 'en-US' ? 'English' : 'Español';
   }
 }

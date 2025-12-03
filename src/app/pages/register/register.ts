@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // 1. Debe estar importado
+import { RouterModule } from '@angular/router';
+import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
 
 @Component({
   selector: 'app-register',
   standalone: true,
 
-  // 2. ¡ESTO ES LO MÁS CRÍTICO! El RouterModule debe estar aquí.
   imports: [
-    RouterModule
+    RouterModule,
+    TranslateDirective,
+    TranslatePlaceholderDirective
   ],
 
-  // 3. Verifica que la ruta del template sea correcta (.html o solo el nombre)
-  templateUrl: './register.html', // O simplemente './register' si no usas la extensión
+  templateUrl: './register.html',
   styleUrls: ['./register.css']
 })
 export class RegisterComponent {

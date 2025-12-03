@@ -1,35 +1,145 @@
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
-  font-size: 16px;
+  padding: clamp(8px, 2vw, 10px) 0;
+  font-size: clamp(13px, 2vw, 16px);
+  gap: 4px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 20px);
   text-decoration: none;
-  color: #495057; /* Texto gris */
-  transition: background-color 0.2s, color 0.2s;
+  color: #495057;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  font-size: clamp(13px, 1.5vw, 15px);
+  gap: 10px;
 }
 
 .nav-item:hover {
-  background-color: #e9ecef; /* Fondo claro al pasar el ratón */
-  color: #00564e; /* Color verde oscuro del proyecto */
+  background-color: #f0f7f6;
+  color: #1a4f4d;
+  border-left-color: #4caf50;
 }
 
-/* Estilo para el elemento activo, como en tu captura de pantalla */
+/* Estilo para el elemento activo */
 .nav-item.active {
-  background-color: #e6f5f4; /* Fondo verde muy claro para indicar selección */
-  color: #00564e; /* Texto verde oscuro */
-  border-left: 4px solid #00564e; /* Barra lateral izquierda */
-  font-weight: bold;
+  background-color: #e6f5f4;
+  color: #1a4f4d;
+  border-left: 3px solid #1a4f4d;
+  font-weight: 600;
 }
 
 .icon {
-  margin-right: 12px;
-  font-size: 20px; /* Tamaño para los iconos */
-  width: 25px; /* Ancho fijo para alinear los iconos */
+  font-size: clamp(16px, 2vw, 20px);
+  width: 24px;
   text-align: center;
+  flex-shrink: 0;
+}
+
+/*==========================================
+  RESPONSIVE DESIGN
+==========================================*/
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+  .sidebar-nav {
+    padding: 12px 0;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+    width: 25px;
+  }
+}
+
+/* Mobile devices (max-width 767px) */
+@media (max-width: 767px) {
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 8px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .nav-item:hover {
+    background-color: #f0f7f6;
+    border-bottom: 2px solid #4caf50;
+    border-left: none;
+  }
+
+  .nav-item.active {
+    background-color: #e6f5f4;
+    border-left: none;
+    border-bottom: 2px solid #1a4f4d;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+}
+
+/* Small (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+  .sidebar-nav {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .nav-item {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
+
+/* Medium (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .sidebar-nav {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .nav-item {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Small devices (max-width 480px) */
+@media (max-width: 480px) {
+  .sidebar-nav {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .nav-item {
+    padding: 10px 6px;
+    font-size: 11px;
+    min-height: 44px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
 }

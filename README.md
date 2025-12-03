@@ -2,6 +2,56 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
 
+## Internacionalización (i18n) - English & Spanish
+
+La aplicación soporta **internacionalización completa** con idiomas **Inglés (en-US)** y **Español (es-ES)**. El idioma por defecto es **Inglés**.
+
+### Características de i18n:
+- ✅ **Idioma por defecto**: Inglés (en-US)
+- ✅ **Selector de idioma**: Disponible en el header para cambiar entre idiomas
+- ✅ **Persistencia**: El idioma seleccionado se guarda en `localStorage`
+- ✅ **Traducciones archivos XLIFF**: Ubicadas en `src/locale/`
+- ✅ **Servicio de traducción**: `src/app/services/i18n.service.ts`
+
+### Uso del selector de idioma
+El selector está integrado en el header (esquina superior derecha). Puedes cambiar entre:
+- 🇺🇸 **English**
+- 🇪🇸 **Español**
+
+### Archivos de traducción:
+- `src/locale/messages.xlf` - Plantilla principal (Inglés)
+- `src/locale/messages.es-ES.xlf` - Traducciones al Español
+
+### Agregar nuevas traducciones:
+1. Edita `src/locale/messages.es-ES.xlf` para agregar nuevas unidades de traducción
+2. El formato es XLIFF 1.2
+3. Cada traducción tiene un `id` único
+
+**Ejemplo:**
+```xml
+<trans-unit id="myKey" datatype="html">
+  <source>English text</source>
+  <target>Texto en español</target>
+</trans-unit>
+```
+
+### Usar traducciones en componentes:
+```typescript
+import { I18nService } from './services/i18n.service';
+
+export class MyComponent {
+  private i18n = inject(I18nService);
+  
+  // Obtener traducción
+  title = this.i18n.translate('my.key');
+  
+  // Cambiar idioma
+  changeLanguage(lang: 'en-US' | 'es-ES') {
+    this.i18n.setLanguage(lang);
+  }
+}
+```
+
 ## Development server
 
 To start a local development server, run:

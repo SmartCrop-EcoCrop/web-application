@@ -1,19 +1,88 @@
-/* src/app/components/language-selector/language-selector.css */
-.lang-dropdown {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  font-size: 14px;
-  cursor: pointer;
-  min-width: 120px;
-  /* Estilos para integrarlo en el header oscuro */
-  background-color: #495057; /* Un poco más claro que el fondo del header */
-  color: white;
-  border: 1px solid #6c757d;
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1.5vw, 8px);
+  padding: clamp(6px, 1.5vw, 10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  flex-wrap: wrap;
 }
 
-.lang-dropdown:focus {
+label {
+  font-weight: 500;
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: white;
+  white-space: nowrap;
+  display: none;
+}
+
+.language-dropdown {
+  padding: clamp(6px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: clamp(12px, 1.5vw, 14px);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.language-dropdown:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.language-dropdown:focus {
   outline: none;
-  border-color: #008075;
+  border-color: #4caf50;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+.language-dropdown option {
+  background-color: #1a4f4d;
+  color: white;
+}
+
+/*==========================================
+  RESPONSIVE DESIGN
+==========================================*/
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+  label {
+    display: inline;
+  }
+}
+
+/* Mobile devices (max-width 767px) */
+@media (max-width: 767px) {
+  .language-selector {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .language-dropdown {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Small devices (max-width 480px) */
+@media (max-width: 480px) {
+  .language-selector {
+    padding: 4px;
+    gap: 4px;
+  }
+
+  label {
+    display: none !important;
+  }
+
+  .language-dropdown {
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 80px;
+  }
 }

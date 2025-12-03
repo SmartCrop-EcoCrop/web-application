@@ -1,9 +1,13 @@
-<div class="lang-selector-container">
-  <select
-    (change)="changeLanguage($event)"
-    class="lang-dropdown"
+<div class="language-selector">
+  <label for="language-select">Language / Idioma:</label>
+  <select 
+    id="language-select"
+    [value]="currentLanguage$()"
+    (change)="changeLanguage($any($event.target).value)"
+    class="language-dropdown"
   >
-    <option value="es-CO">🇪🇸 Español</option>
-    <option value="en-US">🇺🇸 English</option>
+    @for (lang of languages; track lang) {
+      <option [value]="lang">{{ getLanguageLabel(lang) }}</option>
+    }
   </select>
 </div>

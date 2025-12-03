@@ -1,30 +1,18 @@
 /* ----------------------------------------------------- */
-/* Layout Base con CSS Grid */
+/* Layout Base con CSS Grid - Responsive */
 /* ----------------------------------------------------- */
 .app-container {
-  /* Define un layout de grid */
   display: grid;
-
-  /* Define las áreas de la grilla:
-     - Arriba: 'header' ocupa 2 columnas.
-     - Abajo: 'sidebar' y 'content' ocupan sus respectivas columnas. */
   grid-template-areas:
-        "header header"
-        "sidebar content";
+    "header"
+    "sidebar"
+    "content";
 
-  /* Define el ancho de las columnas:
-     - Columna 1 (Sidebar): 250px de ancho fijo.
-     - Columna 2 (Contenido): Ocupa el espacio restante (1fr). */
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
 
-  /* Define la altura de las filas:
-     - Fila 1 (Header): 70px de altura fija.
-     - Fila 2 (Sidebar/Contenido): Ocupa el alto restante de la ventana (1fr). */
-  grid-template-rows: 70px 1fr;
-
-  /* La aplicación debe ocupar todo el alto de la ventana del navegador. */
   height: 100vh;
-  overflow: hidden; /* Evita scrolls no deseados en el contenedor principal */
+  overflow: hidden;
 }
 
 /* ----------------------------------------------------- */
@@ -33,25 +21,93 @@
 
 .app-header {
   grid-area: header;
-  /* Estilos del header: color de fondo, borde inferior, etc. */
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  z-index: 100; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  height: auto;
+  min-height: 60px;
 }
 
 .app-sidebar {
   grid-area: sidebar;
-  /* Estilos del sidebar: color de fondo, altura, etc. */
   background-color: white;
   border-right: 1px solid #eee;
-  padding: 20px 0; /* Espaciado interno */
-  overflow-y: auto; /* Permite scroll si el contenido es largo */
+  padding: clamp(12px, 2vw, 20px) 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 60px);
 }
 
 .app-content {
   grid-area: content;
-  /* Estilos del contenido: color de fondo general de la página */
-  background-color: #f7f7f7; /* Fondo gris muy claro para el contenido */
-  padding: 30px; /* Margen interior para el contenido del dashboard */
-  overflow-y: auto; /* Permite scroll solo en el contenido si es necesario */
+  background-color: #f7f7f7;
+  padding: clamp(16px, 3vw, 30px);
+  overflow-y: auto;
+}
+
+/* ----------------------------------------------------- */
+/* TABLET & DESKTOP LAYOUT (768px+)
+/* ----------------------------------------------------- */
+@media (min-width: 768px) {
+  .app-container {
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 70px 1fr;
+  }
+
+  .app-sidebar {
+    max-height: calc(100vh - 70px);
+  }
+
+  .app-header {
+    height: 70px;
+    min-height: auto;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* MOBILE DEVICES (max-width 767px)
+/* ----------------------------------------------------- */
+@media (max-width: 767px) {
+  .app-container {
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    width: 100%;
+    max-height: calc(100vh - 60px);
+    background-color: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+  }
+
+  .app-sidebar.open {
+    left: 0;
+  }
+
+  .app-content {
+    grid-area: content;
+    overflow-y: auto;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* SMALL DEVICES (max-width 480px)
+/* ----------------------------------------------------- */
+@media (max-width: 480px) {
+  .app-header {
+    min-height: 50px;
+    height: 50px;
+  }
+
+  .app-content {
+    padding: clamp(12px, 2vw, 20px);
+  }
 }

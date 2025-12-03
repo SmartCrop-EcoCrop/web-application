@@ -1,60 +1,60 @@
 <div class="page-header">
-  <h1>Monitoreo de plantas</h1>
-  <p>Visualice imágenes o grabaciones en tiempo real de sus cultivos a través de cámaras IoT.</p>
+  <h1 i18n="@@realtime.title">Plant Monitoring</h1>
+  <p i18n="@@realtime.subtitle">View real-time images or recordings of your crops through IoT cameras.</p>
 </div>
 
 <div class="realtime-layout">
   <div class="viewer-section">
     <div class="camera-viewer">
       <div class="viewer-modes">
-        <button class="mode-btn active">Instantánea</button>
-        <button class="mode-btn">Historial de imágenes</button>
+        <button class="mode-btn active" i18n="@@realtime.snapshot">Snapshot</button>
+        <button class="mode-btn" i18n="@@realtime.imageHistory">Image History</button>
       </div>
       <img src="../../../assets/cultivo_tiempo_real.jpg" alt="Cultivo en tiempo real" class="main-image">
     </div>
 
     <div class="metadata-card sidebar-card">
-      <h3 class="card-title">Metadatos de la Imagen</h3>
+      <h3 class="card-title" i18n="@@realtime.metadata">Image Metadata</h3>
       <p class="metadata-date">26 de Julio, 2024 - 10:30 AM</p>
 
       <div class="metadata-item">
         <span class="status-dot"></span>
-        <p class="status-label">Posible Estrés Hídrico</p>
-        <p class="status-desc">Detectado en el cuadrante superior derecho.</p>
+        <p class="status-label" i18n="@@realtime.waterStress">Possible Water Stress</p>
+        <p class="status-desc" i18n="@@realtime.stressDesc">Detected in the upper right quadrant.</p>
       </div>
 
       <div class="metadata-item">
         <span class="status-dot healthy"></span>
-        <p class="status-label">Crecimiento Saludable</p>
-        <p class="status-desc">El crecimiento celular es normal en el 80% del cultivo.</p>
+        <p class="status-label" i18n="@@realtime.healthyGrowth">Healthy Growth</p>
+        <p class="status-desc" i18n="@@realtime.healthyDesc">Normal cell growth in 80% of the crop.</p>
       </div>
     </div>
   </div>
 
   <div class="camera-controls">
-    <h2>Controles de cámara</h2>
+    <h2 i18n="@@realtime.cameraControls">Camera Controls</h2>
     <div class="control-buttons">
-      <button class="control-btn">Zoom</button>
-      <button class="control-btn">Contraste</button>
-      <button class="control-btn">Pausa/Captura</button>
-      <button class="control-btn">Brillo</button>
+      <button class="control-btn" i18n="@@realtime.zoom">Zoom</button>
+      <button class="control-btn" i18n="@@realtime.contrast">Contrast</button>
+      <button class="control-btn" i18n="@@realtime.pause">Pause/Capture</button>
+      <button class="control-btn" i18n="@@realtime.brightness">Brightness</button>
     </div>
   </div>
 
   <div class="camera-selection">
-    <h2>Seleccionar cámara</h2>
+    <h2 i18n="@@realtime.selectCamera">Select camera</h2>
     <div class="camera-previews">
       <div class="preview-card active">
         <img src="assets/camera_preview_a.jpg" alt="Zona A">
-        <p>Zona A</p>
+        <p i18n="@@realtime.zoneA">Zone A</p>
       </div>
       <div class="preview-card">
         <img src="assets/camera_preview_b.jpg" alt="Zona B">
-        <p>Zona B</p>
+        <p i18n="@@realtime.zoneB">Zone B</p>
       </div>
       <div class="preview-card">
         <img src="assets/camera_preview_c.jpg" alt="Zona C">
-        <p>Zona C</p>
+        <p i18n="@@realtime.zoneC">Zone C</p>
       </div>
     </div>
   </div>

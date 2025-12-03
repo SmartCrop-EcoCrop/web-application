@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
 
 // Ajusta las rutas para que apunten a los archivos .ts reales
 // NOTA: Si usas la ruta '../../components/header/header' sin .ts, funciona mejor
@@ -16,7 +17,9 @@ import { FooterComponent } from '../../components/footer/footer'; // <-- ¡IMPOR
     // Los nombres de clase siguen siendo los mismos (HeaderComponent, SidebarComponent)
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    TranslateDirective,
+    TranslatePlaceholderDirective
   ],
   templateUrl: './main-layout.html', // Asumo que el template también está sin .component
   styleUrls: ['./main-layout.css']

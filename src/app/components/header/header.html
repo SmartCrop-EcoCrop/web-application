@@ -5,10 +5,10 @@
   </div>
 
   <nav class="header-nav">
-    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
-    <a routerLink="/app/foro" routerLinkActive="active" class="nav-link">Foro</a>
-    <a routerLink="/app/clima" routerLinkActive="active" class="nav-link">Clima</a>
-    <a routerLink="/app/noticias" routerLinkActive="active" class="nav-link">Noticias</a>
+    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-link" i18n="@@header.dashboard">Dashboard</a>
+    <a routerLink="/app/foro" routerLinkActive="active" class="nav-link" i18n="@@header.forum">Forum</a>
+    <a routerLink="/app/clima" routerLinkActive="active" class="nav-link" i18n="@@header.weather">Weather</a>
+    <a routerLink="/app/noticias" routerLinkActive="active" class="nav-link" i18n="@@header.news">News</a>
   </nav>
 
   <div class="header-actions">
@@ -17,7 +17,7 @@
 
     <div class="search-container">
       <span class="search-icon">🔍</span>
-      <input type="text" placeholder="Buscar">
+      <input type="text" i18n-placeholder="@@header.search" placeholder="Search">
     </div>
 
     <span class="notification-icon">🔔</span>

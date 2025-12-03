@@ -1,585 +1,778 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" target-language="es-ES" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="login.title" datatype="html">
         <source>Sign In</source>
+        <target>Iniciar Sesión</target>
       </trans-unit>
       <trans-unit id="login.username" datatype="html">
         <source>Username</source>
+        <target>Nombre de usuario</target>
       </trans-unit>
       <trans-unit id="login.password" datatype="html">
         <source>Password</source>
+        <target>Contraseña</target>
       </trans-unit>
       <trans-unit id="login.usernameP" datatype="html">
         <source>Enter your username</source>
+        <target>Ingrese su nombre de usuario</target>
       </trans-unit>
       <trans-unit id="login.passwordP" datatype="html">
         <source>Enter your password</source>
+        <target>Ingrese su contraseña</target>
       </trans-unit>
       <trans-unit id="login.remember" datatype="html">
         <source>Remember me</source>
+        <target>Recordarme</target>
       </trans-unit>
       <trans-unit id="login.forgot" datatype="html">
         <source>Forgot your password?</source>
+        <target>¿Olvidaste tu contraseña?</target>
       </trans-unit>
       <trans-unit id="login.button" datatype="html">
         <source>Sign In</source>
+        <target>Ingresar</target>
       </trans-unit>
       <trans-unit id="login.noAccount" datatype="html">
         <source>Don't have an account?</source>
+        <target>¿No tienes una cuenta?</target>
       </trans-unit>
       <trans-unit id="login.register" datatype="html">
         <source>Register</source>
+        <target>Regístrate</target>
       </trans-unit>
       <trans-unit id="register.title" datatype="html">
         <source>Create Account</source>
+        <target>Crear Cuenta</target>
       </trans-unit>
       <trans-unit id="register.username" datatype="html">
         <source>Username</source>
+        <target>Nombre de usuario</target>
       </trans-unit>
       <trans-unit id="register.email" datatype="html">
         <source>Email</source>
+        <target>Correo electrónico</target>
       </trans-unit>
       <trans-unit id="register.password" datatype="html">
         <source>Password</source>
+        <target>Contraseña</target>
       </trans-unit>
       <trans-unit id="register.confirmPassword" datatype="html">
         <source>Confirm Password</source>
+        <target>Confirmar contraseña</target>
       </trans-unit>
       <trans-unit id="register.button" datatype="html">
         <source>Register</source>
+        <target>Regístrate</target>
       </trans-unit>
       <trans-unit id="register.haveAccount" datatype="html">
         <source>Already have an account?</source>
+        <target>¿Ya tienes una cuenta?</target>
       </trans-unit>
       <trans-unit id="register.login" datatype="html">
         <source>Sign In</source>
+        <target>Iniciar Sesión</target>
       </trans-unit>
       <trans-unit id="dashboard.title" datatype="html">
         <source>Farmer Dashboard</source>
+        <target>Panel del Agricultor</target>
       </trans-unit>
       <trans-unit id="dashboard.realTimeView" datatype="html">
         <source>Real-time View</source>
+        <target>Vista en Tiempo Real</target>
       </trans-unit>
       <trans-unit id="dashboard.currentTemp" datatype="html">
         <source>Current Temperature</source>
+        <target>Temperatura Actual</target>
       </trans-unit>
       <trans-unit id="dashboard.humidity" datatype="html">
         <source>Humidity</source>
+        <target>Humedad</target>
       </trans-unit>
       <trans-unit id="dashboard.wind" datatype="html">
         <source>Wind</source>
+        <target>Viento</target>
       </trans-unit>
       <trans-unit id="dashboard.forecast" datatype="html">
         <source>Forecast</source>
+        <target>Pronóstico</target>
       </trans-unit>
       <trans-unit id="dashboard.viewHistory" datatype="html">
         <source>View History</source>
+        <target>Ver Historial</target>
       </trans-unit>
       <trans-unit id="logout" datatype="html">
         <source>Logout</source>
+        <target>Cerrar Sesión</target>
       </trans-unit>
       <trans-unit id="sidebar.temperature" datatype="html">
         <source>Temperature</source>
+        <target>Temperatura</target>
       </trans-unit>
       <trans-unit id="sidebar.realTime" datatype="html">
         <source>View plants in real time</source>
+        <target>Ver plantas en tiempo real</target>
       </trans-unit>
       <trans-unit id="sidebar.temporal" datatype="html">
         <source>View temporal record</source>
+        <target>Ver registro temporal</target>
       </trans-unit>
       <trans-unit id="sidebar.plagas" datatype="html">
         <source>Pest Identification</source>
+        <target>Identificación de plagas</target>
       </trans-unit>
       <trans-unit id="sidebar.alertas" datatype="html">
         <source>Alerts and notifications</source>
+        <target>Alertas y notificaciones</target>
       </trans-unit>
       <trans-unit id="sidebar.redAgricultores" datatype="html">
         <source>Farmers network</source>
+        <target>Red de agricultores</target>
       </trans-unit>
       <trans-unit id="sidebar.guias" datatype="html">
         <source>Practical guides and recommendations</source>
+        <target>Guías prácticas y recomendaciones</target>
       </trans-unit>
       <trans-unit id="sidebar.perfil" datatype="html">
         <source>Profile</source>
+        <target>Perfil</target>
       </trans-unit>
       <trans-unit id="sidebar.foro" datatype="html">
         <source>Forum</source>
+        <target>Foro</target>
       </trans-unit>
       <trans-unit id="sidebar.clima" datatype="html">
         <source>Weather</source>
+        <target>Clima</target>
       </trans-unit>
       <trans-unit id="sidebar.noticias" datatype="html">
         <source>News</source>
+        <target>Noticias</target>
       </trans-unit>
       <trans-unit id="header.dashboard" datatype="html">
         <source>Dashboard</source>
+        <target>Panel</target>
       </trans-unit>
       <trans-unit id="header.forum" datatype="html">
         <source>Forum</source>
+        <target>Foro</target>
       </trans-unit>
       <trans-unit id="header.weather" datatype="html">
         <source>Weather</source>
+        <target>Clima</target>
       </trans-unit>
       <trans-unit id="header.news" datatype="html">
         <source>News</source>
+        <target>Noticias</target>
       </trans-unit>
       <trans-unit id="header.search" datatype="html">
         <source>Search</source>
+        <target>Buscar</target>
       </trans-unit>
       <trans-unit id="temporal.title" datatype="html">
         <source>Temporal Record</source>
+        <target>Registro Temporal</target>
       </trans-unit>
       <trans-unit id="temporal.subtitle" datatype="html">
         <source>Access data history, statistics and events related to your crops, pests and temperature.</source>
+        <target>Accede al historial de datos, estadísticas y eventos relacionados con tus cultivos, plagas y temperatura.</target>
       </trans-unit>
       <trans-unit id="temporal.thisWeek" datatype="html">
         <source>This Week</source>
+        <target>Esta Semana</target>
       </trans-unit>
       <trans-unit id="temporal.thisMonth" datatype="html">
         <source>This Month</source>
+        <target>Este Mes</target>
       </trans-unit>
       <trans-unit id="temporal.custom" datatype="html">
         <source>Custom</source>
+        <target>Personalizado</target>
       </trans-unit>
       <trans-unit id="temporal.avgTemp" datatype="html">
         <source>Average Temperature</source>
+        <target>Temperatura Promedio</target>
       </trans-unit>
       <trans-unit id="temporal.pestsDetected" datatype="html">
         <source>Pests Detected</source>
+        <target>Plagas Detectadas</target>
       </trans-unit>
       <trans-unit id="temporal.extremeConditions" datatype="html">
         <source>Extreme Weather Conditions</source>
+        <target>Condiciones Climáticas Extremas</target>
       </trans-unit>
       <trans-unit id="temporal.alertsActions" datatype="html">
         <source>Alerts/Actions</source>
+        <target>Alertas/Acciones</target>
       </trans-unit>
       <trans-unit id="temporal.charts" datatype="html">
         <source>Interactive Charts</source>
+        <target>Gráficos Interactivos</target>
       </trans-unit>
       <trans-unit id="temporal.temperature" datatype="html">
         <source>Temperature</source>
+        <target>Temperatura</target>
       </trans-unit>
       <trans-unit id="temporal.pests" datatype="html">
         <source>Pests</source>
+        <target>Plagas</target>
       </trans-unit>
       <trans-unit id="temporal.events" datatype="html">
         <source>Events/Actions</source>
+        <target>Eventos/Acciones</target>
       </trans-unit>
       <trans-unit id="temporal.timeline" datatype="html">
         <source>Timeline</source>
+        <target>Línea de Tiempo</target>
       </trans-unit>
       <trans-unit id="plagas.title" datatype="html">
         <source>Pest Identification</source>
+        <target>Identificación de Plagas</target>
       </trans-unit>
       <trans-unit id="plagas.subtitle" datatype="html">
         <source>Use our artificial vision system to identify pests in your crops or explore our database.</source>
+        <target>Utilice nuestro sistema de visión artificial para identificar plagas en sus cultivos o explore nuestra base de datos.</target>
       </trans-unit>
       <trans-unit id="plagas.quickId" datatype="html">
         <source>Quick Identification by Image</source>
+        <target>Identificación Rápida por Imagen</target>
       </trans-unit>
       <trans-unit id="plagas.dragDrop" datatype="html">
         <source>Drag and drop a photo of the damage or pest, or click to browse.</source>
+        <target>Arrastre y suelte una foto del daño o plaga, o haga clic para buscar.</target>
       </trans-unit>
       <trans-unit id="plagas.uploadBtn" datatype="html">
         <source>Upload Image</source>
+        <target>Subir Imagen</target>
       </trans-unit>
       <trans-unit id="plagas.resultTitle" datatype="html">
         <source>Identification Result</source>
+        <target>Resultado de la Identificación</target>
       </trans-unit>
       <trans-unit id="plagas.resultExample" datatype="html">
         <source>The detected pest would be shown here (e.g: Aphid) with confidence percentage and recommendations.</source>
+        <target>Aquí se mostraría la plaga detectada (ej: Pulgón) con un porcentaje de confianza y recomendaciones.</target>
       </trans-unit>
       <trans-unit id="plagas.searchDb" datatype="html">
         <source>Search in Database</source>
+        <target>Buscar en la Base de Datos</target>
       </trans-unit>
       <trans-unit id="plagas.searchPlaceholder" datatype="html">
         <source>Type the name of the pest or crop...</source>
+        <target>Escriba el nombre de la plaga o cultivo...</target>
       </trans-unit>
       <trans-unit id="plagas.searchBtn" datatype="html">
         <source>Search</source>
+        <target>Buscar</target>
       </trans-unit>
       <trans-unit id="plagas.commonPests" datatype="html">
         <source>Common Pests in the Region</source>
+        <target>Plagas Comunes en la Región</target>
       </trans-unit>
       <trans-unit id="alertas.title" datatype="html">
         <source>Alerts and Notifications</source>
+        <target>Alertas y Notificaciones</target>
       </trans-unit>
       <trans-unit id="alertas.subtitle" datatype="html">
         <source>Monitor critical events and recommendations for your crops.</source>
+        <target>Monitorea los eventos críticos y las recomendaciones para tus cultivos.</target>
       </trans-unit>
       <trans-unit id="alertas.tabClimate" datatype="html">
         <source>Climate</source>
+        <target>Clima</target>
       </trans-unit>
       <trans-unit id="alertas.tabPests" datatype="html">
         <source>Pests</source>
+        <target>Plagas</target>
       </trans-unit>
       <trans-unit id="alertas.tabHumidity" datatype="html">
         <source>Humidity</source>
+        <target>Humedad</target>
       </trans-unit>
       <trans-unit id="alertas.tabActions" datatype="html">
         <source>Actions</source>
+        <target>Acciones</target>
       </trans-unit>
       <trans-unit id="alertas.tabGeneral" datatype="html">
         <source>General</source>
+        <target>General</target>
       </trans-unit>
       <trans-unit id="alertas.lowHumidity" datatype="html">
         <source>Low Humidity</source>
+        <target>Baja Humedad</target>
       </trans-unit>
       <trans-unit id="alertas.lowHumidityDesc" datatype="html">
         <source>Low humidity levels were detected in sector B. Immediate irrigation is recommended.</source>
+        <target>Se detectaron niveles bajos de humedad en el sector B. Se recomienda riego inmediato.</target>
       </trans-unit>
       <trans-unit id="alertas.urgent" datatype="html">
         <source>Urgent</source>
+        <target>Urgente</target>
       </trans-unit>
       <trans-unit id="alertas.alertHistory" datatype="html">
         <source>Alert History</source>
+        <target>Historial de Alertas</target>
       </trans-unit>
       <trans-unit id="alertas.highTemp" datatype="html">
         <source>High Temperature</source>
+        <target>Alta Temperatura</target>
       </trans-unit>
       <trans-unit id="alertas.highTempDesc" datatype="html">
         <source>Temperature in sector B exceeded 35°C. It is recommended to activate the sprinkler irrigation system.</source>
+        <target>La temperatura en el sector B superó los 35°C. Se recomienda activar el sistema de riego por aspersión.</target>
       </trans-unit>
       <trans-unit id="alertas.whitefly" datatype="html">
         <source>Whitefly</source>
+        <target>Mosca Blanca</target>
       </trans-unit>
       <trans-unit id="alertas.whiteflyDesc" datatype="html">
         <source>An increase in the whitefly population was detected in the pepper crop. Preventive treatment is recommended.</source>
+        <target>Se detectó un aumento en la población de mosca blanca en el cultivo de pimiento. Se recomienda aplicar un tratamiento preventivo.</target>
       </trans-unit>
       <trans-unit id="alertas.realTimeAlert" datatype="html">
         <source>Real-time Alert</source>
+        <target>Alerta en Tiempo Real</target>
       </trans-unit>
       <trans-unit id="alertas.frostAlert" datatype="html">
         <source>Frost Alert</source>
+        <target>Alerta de Helada</target>
       </trans-unit>
       <trans-unit id="alertas.frostAlertDesc" datatype="html">
         <source>A severe frost is expected in the next 3 hours. Protect your crops.</source>
+        <target>Se espera una helada severa en las próximas 3 horas. Proteja sus cultivos.</target>
       </trans-unit>
       <trans-unit id="alertas.viewDetails" datatype="html">
         <source>View Details →</source>
+        <target>Ver Detalles →</target>
       </trans-unit>
       <trans-unit id="alertas.config" datatype="html">
         <source>Configuration</source>
+        <target>Configuración</target>
       </trans-unit>
       <trans-unit id="alertas.customizeNotif" datatype="html">
         <source>Customize Notifications</source>
+        <target>Personalizar Notificaciones</target>
       </trans-unit>
       <trans-unit id="alertas.viewFullHistory" datatype="html">
         <source>View Full History</source>
+        <target>Ver Historial Completo</target>
       </trans-unit>
       <trans-unit id="guias.title" datatype="html">
         <source>Practical Guides</source>
+        <target>Guías Prácticas</target>
       </trans-unit>
       <trans-unit id="guias.subtitle" datatype="html">
         <source>Explore our library of practical guides to optimize your crops and improve your agricultural practices.</source>
+        <target>Explora nuestra biblioteca de guías prácticas para optimizar tus cultivos y mejorar tus prácticas agrícolas.</target>
       </trans-unit>
       <trans-unit id="guias.searchPlaceholder" datatype="html">
         <source>Search guides by keyword...</source>
+        <target>Buscar guías por palabra clave...</target>
       </trans-unit>
       <trans-unit id="guias.filterPests" datatype="html">
         <source>Pest Management</source>
+        <target>Manejo de plagas</target>
       </trans-unit>
       <trans-unit id="guias.filterClimate" datatype="html">
         <source>Climate Control</source>
+        <target>Control climático</target>
       </trans-unit>
       <trans-unit id="guias.filterIrrigation" datatype="html">
         <source>Irrigation and Nutrients</source>
+        <target>Riego y nutrientes</target>
       </trans-unit>
       <trans-unit id="guias.filterHarvest" datatype="html">
         <source>Harvest and Post-harvest</source>
+        <target>Cosecha y post-cosecha</target>
       </trans-unit>
       <trans-unit id="guias.filterMaintenance" datatype="html">
         <source>Preventive Maintenance</source>
+        <target>Mantenimiento preventivo</target>
       </trans-unit>
       <trans-unit id="guias.recommended" datatype="html">
         <source>Recommended Guides</source>
+        <target>Guías Recomendadas</target>
       </trans-unit>
       <trans-unit id="guias.maizGuide" datatype="html">
         <source>Guide for pest control in corn crops</source>
+        <target>Guía para el control de plagas en cultivos de maíz</target>
       </trans-unit>
       <trans-unit id="guias.maizDesc" datatype="html">
         <source>Learn to identify and control the most common pests in corn crops.</source>
+        <target>Aprende a identificar y controlar las plagas más comunes en cultivos de maíz.</target>
       </trans-unit>
       <trans-unit id="guias.tomatoGuide" datatype="html">
         <source>Efficient irrigation management in tomato crops</source>
+        <target>Manejo eficiente del riego en cultivos de tomate</target>
       </trans-unit>
       <trans-unit id="guias.tomatoDesc" datatype="html">
         <source>Optimize water use and improve the quality of your tomatoes with our recommendations.</source>
+        <target>Optimiza el uso del agua y mejora la calidad de tus tomates con nuestras recomendaciones.</target>
       </trans-unit>
       <trans-unit id="guias.fruitsGuide" datatype="html">
         <source>Harvest and post-harvest techniques for fruits</source>
+        <target>Técnicas de cosecha y post-cosecha para frutas</target>
       </trans-unit>
       <trans-unit id="guias.fruitsDesc" datatype="html">
         <source>Discover best practices to ensure quality and durability of your products.</source>
+        <target>Descubre las mejores prácticas para asegurar la calidad y durabilidad de tus productos.</target>
       </trans-unit>
       <trans-unit id="guias.allGuides" datatype="html">
         <source>All Guides</source>
+        <target>Todas las Guías</target>
       </trans-unit>
       <trans-unit id="red.title" datatype="html">
         <source>Farmers Network</source>
+        <target>Red de Agricultores</target>
       </trans-unit>
       <trans-unit id="red.subtitle" datatype="html">
         <source>Connect with other farmers to share experiences, tips and solutions.</source>
+        <target>Conéctese con otros agricultores para compartir experiencias, consejos y soluciones.</target>
       </trans-unit>
       <trans-unit id="red.newPost" datatype="html">
         <source>Create a new post</source>
+        <target>Crear una nueva publicación</target>
       </trans-unit>
       <trans-unit id="red.newPostPlaceholder" datatype="html">
         <source>What are you harvesting today or what problem have you solved?</source>
+        <target>¿Qué estás cosechando hoy o qué problema has resuelto?</target>
       </trans-unit>
       <trans-unit id="red.postBtn" datatype="html">
         <source>Post</source>
+        <target>Publicar</target>
       </trans-unit>
       <trans-unit id="red.recentPosts" datatype="html">
         <source>Recent Posts</source>
+        <target>Publicaciones Recientes</target>
       </trans-unit>
       <trans-unit id="red.inIrrigation" datatype="html">
         <source>In Irrigation</source>
+        <target>En Riego</target>
       </trans-unit>
       <trans-unit id="red.postTitle" datatype="html">
         <source>Best way to apply drip irrigation in dry climate</source>
+        <target>Mejor forma de aplicar riego por goteo en clima seco</target>
       </trans-unit>
       <trans-unit id="red.postContent" datatype="html">
         <source>Hello everyone, I'm experiencing excessive evaporation with my drip system...</source>
+        <target>Hola a todos, estoy experimentando mucha evaporación con mi sistema de goteo...</target>
       </trans-unit>
       <trans-unit id="red.likes" datatype="html">
         <source>Likes</source>
+        <target>Me gusta</target>
       </trans-unit>
       <trans-unit id="red.comments" datatype="html">
         <source>Comments</source>
+        <target>Comentarios</target>
       </trans-unit>
       <trans-unit id="red.popularTopics" datatype="html">
         <source>Popular Topics</source>
+        <target>Temas Populares</target>
       </trans-unit>
       <trans-unit id="red.suggestedFarmers" datatype="html">
         <source>Suggested Farmers</source>
+        <target>Agricultores Sugeridos</target>
       </trans-unit>
       <trans-unit id="clima.title" datatype="html">
         <source>Weather and Forecast</source>
+        <target>Clima y Pronóstico</target>
       </trans-unit>
       <trans-unit id="clima.subtitle" datatype="html">
         <source>Updated weather information to optimize your crop planning.</source>
+        <target>Información climática actualizada para optimizar la planificación de sus cultivos.</target>
       </trans-unit>
       <trans-unit id="clima.temperature" datatype="html">
         <source>Temperature</source>
+        <target>Temperatura</target>
       </trans-unit>
       <trans-unit id="clima.sunny" datatype="html">
         <source>Sunny</source>
+        <target>Soleado</target>
       </trans-unit>
       <trans-unit id="clima.humidity" datatype="html">
         <source>Humidity</source>
+        <target>Humedad</target>
       </trans-unit>
       <trans-unit id="clima.weeklyForecast" datatype="html">
         <source>Weekly Forecast</source>
+        <target>Pronóstico Semanal</target>
       </trans-unit>
       <trans-unit id="clima.monday" datatype="html">
         <source>Monday</source>
+        <target>Lunes</target>
       </trans-unit>
       <trans-unit id="clima.wednesday" datatype="html">
         <source>Wednesday</source>
+        <target>Miércoles</target>
       </trans-unit>
       <trans-unit id="clima.alertsRec" datatype="html">
         <source>Alerts and Recommendations</source>
+        <target>Alertas y Recomendaciones</target>
       </trans-unit>
       <trans-unit id="clima.frostAlert" datatype="html">
         <source>Frost Alert</source>
+        <target>Alerta de Heladas</target>
       </trans-unit>
       <trans-unit id="clima.frostRec" datatype="html">
         <source>Risk of frost at night. Protect sensitive crops.</source>
+        <target>Riesgo de heladas en la noche. Proteja los cultivos sensibles.</target>
       </trans-unit>
       <trans-unit id="clima.seedRec" datatype="html">
         <source>Sowing Recommendation</source>
+        <target>Recomendación de Siembra</target>
       </trans-unit>
       <trans-unit id="clima.seedRecDesc" datatype="html">
         <source>Ideal conditions for corn sowing.</source>
+        <target>Condiciones ideales para la siembra de maíz.</target>
       </trans-unit>
       <trans-unit id="clima.rainForecast" datatype="html">
         <source>Rain Forecast</source>
+        <target>Pronóstico de Lluvia</target>
       </trans-unit>
       <trans-unit id="clima.rainForecastDesc" datatype="html">
         <source>Moderate rain expected. Adjust irrigation as needed.</source>
+        <target>Se espera lluvia moderada. Ajuste el riego según sea necesario.</target>
       </trans-unit>
       <trans-unit id="noticias.title" datatype="html">
         <source>Latest News</source>
+        <target>Últimas Noticias</target>
       </trans-unit>
       <trans-unit id="noticias.subtitle" datatype="html">
         <source>Stay updated on the agricultural sector, technology and climate.</source>
+        <target>Mantente actualizado sobre el sector agrícola, tecnología y clima.</target>
       </trans-unit>
       <trans-unit id="noticias.tabClimate" datatype="html">
         <source>Climate</source>
+        <target>Clima</target>
       </trans-unit>
       <trans-unit id="noticias.tabCrops" datatype="html">
         <source>Crops</source>
+        <target>Cultivos</target>
       </trans-unit>
       <trans-unit id="noticias.tabTechnology" datatype="html">
         <source>Agricultural Technology</source>
+        <target>Tecnología Agrícola</target>
       </trans-unit>
       <trans-unit id="noticias.tabForum" datatype="html">
         <source>Forum News</source>
+        <target>Noticias del Foro</target>
       </trans-unit>
       <trans-unit id="noticias.news1Title" datatype="html">
         <source>Impact of Climate Change on Local Agriculture</source>
+        <target>Impacto del Cambio Climático en la Agricultura Local</target>
       </trans-unit>
       <trans-unit id="noticias.news1Excerpt" datatype="html">
         <source>A recent study reveals how climate variations are affecting crops in the region...</source>
+        <target>Un estudio reciente revela cómo las variaciones climáticas están afectando los cultivos en la región...</target>
       </trans-unit>
       <trans-unit id="noticias.readMore" datatype="html">
         <source>Read More</source>
+        <target>Leer Más</target>
       </trans-unit>
       <trans-unit id="noticias.news2Title" datatype="html">
         <source>New Sustainable Farming Techniques</source>
+        <target>Nuevas Técnicas de Cultivo Sostenible</target>
       </trans-unit>
       <trans-unit id="noticias.news2Excerpt" datatype="html">
         <source>Discover the latest innovations in sustainable agriculture that are helping farmers improve their yields.</source>
+        <target>Descubre las últimas innovaciones en agricultura sostenible que están ayudando a los agricultores a mejorar sus rendimientos.</target>
       </trans-unit>
       <trans-unit id="noticias.loadMore" datatype="html">
         <source>Load more news</source>
+        <target>Cargar más noticias</target>
       </trans-unit>
       <trans-unit id="noticias.relatedNews" datatype="html">
         <source>Related News</source>
+        <target>Noticias Relacionadas</target>
       </trans-unit>
       <trans-unit id="noticias.recentComments" datatype="html">
         <source>Recent Comments</source>
+        <target>Comentarios Recientes</target>
       </trans-unit>
       <trans-unit id="foro.title" datatype="html">
         <source>Discussion Forum</source>
+        <target>Foro de Discusión</target>
       </trans-unit>
       <trans-unit id="foro.subtitle" datatype="html">
         <source>Discuss best agricultural practices, solve problems and share knowledge with the community.</source>
+        <target>Discute las mejores prácticas agrícolas, resuelve problemas y comparte conocimientos con la comunidad.</target>
       </trans-unit>
       <trans-unit id="foro.searchPlaceholder" datatype="html">
         <source>Search in the forum</source>
+        <target>Buscar en el foro</target>
       </trans-unit>
       <trans-unit id="foro.tabCropProblems" datatype="html">
         <source>Crop Problems</source>
+        <target>Problemas de Cultivos</target>
       </trans-unit>
       <trans-unit id="foro.tabTechnology" datatype="html">
         <source>Technology and Tools</source>
+        <target>Tecnología y Herramientas</target>
       </trans-unit>
       <trans-unit id="foro.tabClimate" datatype="html">
         <source>Climate Conditions</source>
+        <target>Condiciones Climáticas</target>
       </trans-unit>
       <trans-unit id="foro.tabImprovements" datatype="html">
         <source>Agricultural Improvements</source>
+        <target>Mejoras Agrícolas</target>
       </trans-unit>
       <trans-unit id="foro.tabNews" datatype="html">
         <source>News and Updates</source>
+        <target>Noticias y Actualizaciones</target>
       </trans-unit>
       <trans-unit id="foro.topic1Title" datatype="html">
         <source>Pest Management in Corn Crops</source>
+        <target>Manejo de Plagas en Cultivos de Maíz</target>
       </trans-unit>
       <trans-unit id="foro.topic1Desc" datatype="html">
         <source>Let's discuss best practices for pest management in corn crops. What methods have been effective for you?</source>
+        <target>Discutamos las mejores prácticas para el manejo de plagas en cultivos de maíz. ¿Qué métodos han sido efectivos para ustedes?</target>
       </trans-unit>
       <trans-unit id="foro.topic2Title" datatype="html">
         <source>Comparison of Tractors and Agricultural Tools</source>
+        <target>Comparación de Tractores y Herramientas Agrícolas</target>
       </trans-unit>
       <trans-unit id="foro.topic2Desc" datatype="html">
         <source>Share your experiences with different types of tractors and agricultural tools. Which brands and models are most reliable?</source>
+        <target>Compartan sus experiencias con diferentes tipos de tractores y herramientas agrícolas. ¿Cuáles son las marcas y modelos más confiables?</target>
       </trans-unit>
       <trans-unit id="foro.by" datatype="html">
         <source>By</source>
+        <target>Por</target>
       </trans-unit>
       <trans-unit id="foro.daysAgo" datatype="html">
         <source>days ago</source>
+        <target>días</target>
       </trans-unit>
       <trans-unit id="realtime.title" datatype="html">
         <source>Plant Monitoring</source>
+        <target>Monitoreo de plantas</target>
       </trans-unit>
       <trans-unit id="realtime.subtitle" datatype="html">
         <source>View real-time images or recordings of your crops through IoT cameras.</source>
+        <target>Visualice imágenes o grabaciones en tiempo real de sus cultivos a través de cámaras IoT.</target>
       </trans-unit>
       <trans-unit id="realtime.snapshot" datatype="html">
         <source>Snapshot</source>
+        <target>Instantánea</target>
       </trans-unit>
       <trans-unit id="realtime.imageHistory" datatype="html">
         <source>Image History</source>
+        <target>Historial de imágenes</target>
       </trans-unit>
       <trans-unit id="realtime.metadata" datatype="html">
         <source>Image Metadata</source>
+        <target>Metadatos de la Imagen</target>
       </trans-unit>
       <trans-unit id="realtime.waterStress" datatype="html">
         <source>Possible Water Stress</source>
+        <target>Posible Estrés Hídrico</target>
       </trans-unit>
       <trans-unit id="realtime.stressDesc" datatype="html">
         <source>Detected in the upper right quadrant.</source>
+        <target>Detectado en el cuadrante superior derecho.</target>
       </trans-unit>
       <trans-unit id="realtime.healthyGrowth" datatype="html">
         <source>Healthy Growth</source>
+        <target>Crecimiento Saludable</target>
       </trans-unit>
       <trans-unit id="realtime.healthyDesc" datatype="html">
         <source>Normal cell growth in 80% of the crop.</source>
+        <target>El crecimiento celular es normal en el 80% del cultivo.</target>
       </trans-unit>
       <trans-unit id="realtime.cameraControls" datatype="html">
         <source>Camera Controls</source>
+        <target>Controles de cámara</target>
       </trans-unit>
       <trans-unit id="realtime.zoom" datatype="html">
         <source>Zoom</source>
+        <target>Zoom</target>
       </trans-unit>
       <trans-unit id="realtime.contrast" datatype="html">
         <source>Contrast</source>
+        <target>Contraste</target>
       </trans-unit>
       <trans-unit id="realtime.pause" datatype="html">
         <source>Pause/Capture</source>
+        <target>Pausa/Captura</target>
       </trans-unit>
       <trans-unit id="realtime.brightness" datatype="html">
         <source>Brightness</source>
+        <target>Brillo</target>
       </trans-unit>
       <trans-unit id="realtime.selectCamera" datatype="html">
         <source>Select camera</source>
+        <target>Seleccionar cámara</target>
       </trans-unit>
       <trans-unit id="realtime.zoneA" datatype="html">
         <source>Zone A</source>
+        <target>Zona A</target>
       </trans-unit>
       <trans-unit id="realtime.zoneB" datatype="html">
         <source>Zone B</source>
+        <target>Zona B</target>
       </trans-unit>
       <trans-unit id="realtime.zoneC" datatype="html">
         <source>Zone C</source>
+        <target>Zona C</target>
       </trans-unit>
       <trans-unit id="profile.title" datatype="html">
         <source>My Profile and Settings</source>
+        <target>Mi Perfil y Configuraciones</target>
       </trans-unit>
       <trans-unit id="profile.subtitle" datatype="html">
         <source>Manage your account information, notifications and SmartCrop application settings.</source>
+        <target>Gestiona la información de tu cuenta, las notificaciones y los ajustes de tu aplicación SmartCrop.</target>
       </trans-unit>
       <trans-unit id="profile.personalInfo" datatype="html">
         <source>Personal Information</source>
+        <target>Información Personal</target>
       </trans-unit>
       <trans-unit id="profile.changePicture" datatype="html">
         <source>Change Photo</source>
+        <target>Cambiar Foto</target>
       </trans-unit>
       <trans-unit id="profile.fullName" datatype="html">
         <source>Full Name</source>
+        <target>Nombre Completo</target>
       </trans-unit>
       <trans-unit id="profile.email" datatype="html">
         <source>Email</source>
+        <target>Correo Electrónico</target>
       </trans-unit>
       <trans-unit id="profile.cropLocation" datatype="html">
         <source>Crop Location</source>
+        <target>Ubicación del Cultivo</target>
       </trans-unit>
       <trans-unit id="profile.saveChanges" datatype="html">
         <source>Save Changes</source>
+        <target>Guardar Cambios</target>
       </trans-unit>
       <trans-unit id="profile.notifications" datatype="html">
         <source>Notifications</source>
+        <target>Notificaciones</target>
       </trans-unit>
       <trans-unit id="profile.pestAlerts" datatype="html">
         <source>Pest Alerts</source>
+        <target>Alertas de Plagas</target>
       </trans-unit>
       <trans-unit id="profile.irrigationReminders" datatype="html">
         <source>Irrigation Reminders</source>
+        <target>Recordatorios de Riego</target>
       </trans-unit>
       <trans-unit id="profile.newsGuides" datatype="html">
         <source>News and Guides</source>
+        <target>Novedades y Guías</target>
       </trans-unit>
       <trans-unit id="profile.changePassword" datatype="html">
         <source>Change Password</source>
+        <target>Cambiar Contraseña</target>
       </trans-unit>
       <trans-unit id="profile.logout" datatype="html">
         <source>Logout</source>
+        <target>Cerrar Sesión</target>
       </trans-unit>
     </body>
   </file>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router'; // Importa Router y RouterModule
+import { Router, RouterModule } from '@angular/router';
+import { TranslateDirective, TranslatePlaceholderDirective } from '../../directives/translate.directive';
 
 @Component({
   selector: 'app-login',
   standalone: true,
 
-  imports: [RouterModule],
+  imports: [RouterModule, TranslateDirective, TranslatePlaceholderDirective],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
 })

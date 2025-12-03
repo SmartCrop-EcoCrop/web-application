@@ -9,6 +9,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es-ES": {
+            "translation": "src/locale/messages.es-ES.xlf",
+            "baseHref": "/es-ES/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -55,13 +64,16 @@
               "extractLicenses": false,
               "sourceMap": true
             },
-
             "en-US": {
-
-              "localize": ["en-US"]
+              "localize": ["en-US"],
+              "outputPath": "dist/SmartCrop-App5"
+            },
+            "es-ES": {
+              "localize": ["es-ES"],
+              "outputPath": "dist/SmartCrop-App5/es-ES"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "en-US"
         },
         "serve": {
           "builder": "@angular/build:dev-server",
@@ -71,10 +83,6 @@
             },
             "development": {
               "buildTarget": "SmartCrop-App5:build:development"
-            },
-
-            "en-US": {
-              "buildTarget": "SmartCrop-App5:build:development,en-US"
             }
           },
           "defaultConfiguration": "development"
